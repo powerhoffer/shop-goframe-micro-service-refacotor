@@ -1,0 +1,336 @@
+2026-05-02T22:05:12.440+08:00 {9fde5a52a9c4ab18db0f002529a8a6b8} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=11 HTTP/1.1" 3002814.403, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 4, "", ""
+Stack:
+1. context deadline exceeded while waiting for connections to become ready
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:05:22.373+08:00 {3af97ea2abc4ab18dc0f00254f34b56d} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=&size= HTTP/1.1" 3000943.048, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 4, "", ""
+Stack:
+1. context deadline exceeded while waiting for connections to become ready
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:05:52.013+08:00 {c62a033cb3c4ab18dd0f002508df481c} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 437.747, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:07:07.724+08:00 {8d04c6dcc4c4ab18de0f0025ac226094} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 368.551, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:07:09.785+08:00 {f96e9857c5c4ab18df0f0025c0bb2e97} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 496.442, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:11:20.595+08:00 {087e0fbdffc4ab18e00f00258b1fdb72} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 384.773, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:11:22.639+08:00 {e4f0e03600c5ab18e10f0025b7e925ea} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 466.634, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:12:50.935+08:00 {e9e5b4c514c5ab18e20f00253f479d0c} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 521.301, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:13:48.894+08:00 {0fd4584422c5ab18e30f0025c750a6f4} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 672.586, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:13:50.801+08:00 {550b07b622c5ab18e40f00250de38d3b} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 726.191, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:13:52.439+08:00 {b81ea61723c5ab18e50f00254832c8b9} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 711.954, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:15:29.571+08:00 {9d1330b539c5ab18e60f00252aeeec65} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 324.485, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:20:31.719+08:00 {b38fb25b7fc5ab182ea2a16c3d969bba} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 3002480.582, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 4, "", ""
+Stack:
+1. context deadline exceeded while waiting for connections to become ready
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:21:56.481+08:00 {36b6cbca93c5ab182fa2a16c25935f95} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 611.875, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:22:01.027+08:00 {56bcc6d994c5ab1830a2a16c573bd913} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 448.035, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:22:08.366+08:00 {362c368f96c5ab1831a2a16cd9ce2024} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 497.281, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:22:56.234+08:00 {cd937d01a1c5ab18d67e160677ed6ecf} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 3000918.087, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 4, "", ""
+Stack:
+1. context deadline exceeded while waiting for connections to become ready
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:25:11.798+08:00 {ed638844c1c5ab18d77e160655c4b31d} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 1623.391, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:26:13.194+08:00 {74442eddcec5ab1853ebac2f93b3855a} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 3002083.571, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 4, "", ""
+Stack:
+1. context deadline exceeded while waiting for connections to become ready
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:31:21.210+08:00 {348f3f4717c6ab1854ebac2fc425d0bd} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 505.619, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:36:43.121+08:00 {5cc49c8761c6ab18499179606ed7abca} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 3004193.907, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 4, "", ""
+Stack:
+1. context deadline exceeded while waiting for connections to become ready
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:45:00.706+08:00 {8ef6d8c0d3c6ab18f959ed2eb508eb70} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 10002777.207, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 4, "", ""
+Stack:
+1. context deadline exceeded while waiting for connections to become ready
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:45:10.705+08:00 {c9def4d4d6c6ab18fa59ed2e2cb52d3c} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 6781602.760, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:45:16.318+08:00 {17c692b7d9c6ab18fb59ed2e414a4c0a} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 444.379, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:45:18.114+08:00 {f0cda822dac6ab18fc59ed2e58adefa6} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 461.301, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:52:08.251+08:00 {cecfa04c37c7ab18c80beb0b95e889df} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 10001905.624, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 4, "", ""
+Stack:
+1. context deadline exceeded while waiting for connections to become ready
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:55:32.663+08:00 {ee3870e466c7ab187d2b2057b2afbf7e} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=1&size=10 HTTP/1.1" 10001652.865, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 4, "", ""
+Stack:
+1. context deadline exceeded while waiting for connections to become ready
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-02T22:56:27.949+08:00 {d107ed1776c7ab187e2b2057a63b4845} 200 "GET http 127.0.0.1:8199 /frontend/consignee?page&size HTTP/1.1" 371.135, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 192.168.64.1:7890: i/o timeout"
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+

@@ -1,0 +1,110 @@
+2026-05-03 00:33:33.839 {f2c44d89c2ccab18e9e0e04f1acab25b} user-service 200 "POST http 127.0.0.1:8199 /frontend/consignee HTTP/1.1" 12110.153, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 52, "", ""
+Stack:
+1. ConsigneeInfo Create 插入失败: INSERT INTO `consignee_info`(`user_id`,`is_default`,`name`,`phone`,`province`,`city`,`town`,`street`,`detail`,`created_at`,`updated_at`) VALUES(75,49,'仇国珍','071 4110 8935','内蒙古自治区','西徽市','id proident ipsum','et in Lorem in Ut','mollit reprehenderit','2026-05-03 00:33:33','2026-05-03 00:33:33') : Error 1406 (22001): Data too long for column 'phone' at row 1
+   1).  shop-goframe-micro-service-refacotor/utility.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1.(*consigneeInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/consignee_info/v1/consignee_info_grpc.pb.go:47
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_consignee_info_create.go:19
+   4).  shop-goframe-micro-service-refacotor/utility.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware.go:23
+
+2026-05-03 16:58:21.810 {d88d65078002ac188c660a026cfe2c79} user-service 200 "GET http 127.0.0.1:8199 /frontend/user/info?id=7 HTTP/1.1" 2620.866, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. destination pointer cannot be nil
+   1).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfo
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_user_info.go:24
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 16:58:41.310 {ff0698918402ac188d660a02e6d49a90} user-service 200 "GET http 127.0.0.1:8199 /frontend/user/info?id=7 HTTP/1.1" 4547.857, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. destination pointer cannot be nil
+   1).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfo
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_user_info.go:24
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 16:59:03.628 {6d5bf4c38902ac188f660a02f2c318ef} user-service 200 "GET http 127.0.0.1:8199 /frontend/user/info?id=8 HTTP/1.1" 2556.997, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. destination pointer cannot be nil
+   1).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfo
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_user_info.go:24
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 17:00:48.719 {2b5dc13ba202ac1890660a025685fa15} user-service 200 "GET http 127.0.0.1:8199 /frontend/user/info?id=8 HTTP/1.1" 4973.842, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. destination pointer cannot be nil
+   1).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfo
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_user_info.go:24
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 17:00:53.310 {95a08d4da302ac1891660a0217d22854} user-service 200 "GET http 127.0.0.1:8199 /frontend/user/info?id=7 HTTP/1.1" 1959.471, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. destination pointer cannot be nil
+   1).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfo
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_user_info.go:24
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 17:02:59.043 {b3dfb093c002ac1892660a0208c89266} user-service 200 "GET http 127.0.0.1:8199 /frontend/user/info?id=7 HTTP/1.1" 3717.031, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. destination pointer cannot be nil
+   1).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfo
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_user_info.go:24
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 17:03:34.874 {20fe70ebc802ac1893660a02a42184ad} user-service 200 "GET http 127.0.0.1:8199 /frontend/user/info?id=7 HTTP/1.1" 3292.973, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. destination pointer cannot be nil
+   1).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfo
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_user_info.go:24
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 21:12:02.304 {a617acd35710ac1819e62b42900ee8c1} user-service 200 "GET http 127.0.0.1:8199 /frontend/collection?type=1&page=1&size=10 HTTP/1.1" 424.307, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 21:12:25.405 {714275e05a10ac181ae62b4223711389} user-service 200 "POST http 127.0.0.1:8199 /frontend/user/login HTTP/1.1" 10002580.249, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", ""
+Stack:
+1. 登录失败
+   1).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoLogin
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_user_info_login.go:28
+2. context deadline exceeded
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/user_info/v1.(*userInfoClient).Login
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/user_info/v1/user_info_grpc.pb.go:44
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoLogin
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_user_info_login.go:23
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 21:12:40.567 {dda756bc6010ac181ce62b42105b2ffd} user-service 200 "GET http 127.0.0.1:8199 /frontend/collection?type=1&page=1&size=10 HTTP/1.1" 153.682, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 21:14:43.257 {f0c9384d7d10ac1820e62b42a04d2236} user-service 200 "GET http 127.0.0.1:8199 /frontend/comment?page=1&size=10 HTTP/1.1" 257.980, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 21:15:03.236 {d1d818f48110ac1822e62b42b3165967} user-service 200 "GET http 127.0.0.1:8199 /frontend/praise?type&page&size HTTP/1.1" 294.770, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 51, "Validation Failed", ""
+Stack:
+The type field is required

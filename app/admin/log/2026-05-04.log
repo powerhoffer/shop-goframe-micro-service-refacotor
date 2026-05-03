@@ -1,0 +1,2 @@
+2026-05-04 00:05:47.436 [INFO] admin-service signal received: interrupt, gracefully shutting down
+2026-05-04 00:05:47.437 [DEBU] admin-service service deregister: &{Service:0xc0000f88c0 Endpoints:127.0.0.1:31003 Metadata:map[protocol:grpc]}

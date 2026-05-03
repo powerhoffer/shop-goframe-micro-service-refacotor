@@ -1,0 +1,42 @@
+2026-05-03 18:48:12.245 [DEBU] interaction-service service register: &{Head: Deployment: Namespace: Name:interaction Version: Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 18:48:12.246 [INFO] interaction-service pid[2912]: grpc server started listening on [:31002]
+2026-05-03 18:53:04.576 [INFO] interaction-service signal received: interrupt, gracefully shutting down
+2026-05-03 18:53:04.576 [DEBU] interaction-service service deregister: &{Service:0xc0002c5730 Endpoints:127.0.0.1:31002 Metadata:map[UpdateAt:2026-05-03 18:48:12 protocol:grpc]}
+2026-05-03 18:53:09.097 [DEBU] interaction-service service register: &{Head: Deployment: Namespace: Name:interaction Version: Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 18:53:09.098 [INFO] interaction-service pid[3168]: grpc server started listening on [:31002]
+2026-05-03 18:55:19.923 [INFO] interaction-service signal received: interrupt, gracefully shutting down
+2026-05-03 18:55:19.923 [DEBU] interaction-service service deregister: &{Service:0xc0002cf730 Endpoints:127.0.0.1:31002 Metadata:map[UpdateAt:2026-05-03 18:53:09 protocol:grpc]}
+2026-05-03 18:59:13.901 [DEBU] interaction-service service register: &{Head: Deployment: Namespace: Name:interaction Version: Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 18:59:13.902 [INFO] interaction-service pid[3384]: grpc server started listening on [:31002]
+2026-05-03 19:00:29.316 [INFO] interaction-service signal received: interrupt, gracefully shutting down
+2026-05-03 19:00:29.317 [DEBU] interaction-service service deregister: &{Service:0xc0002e5f10 Endpoints:127.0.0.1:31002 Metadata:map[UpdateAt:2026-05-03 18:59:13 protocol:grpc]}
+2026-05-03 19:01:17.580 [DEBU] interaction-service service register: &{Head: Deployment: Namespace: Name:interaction Version: Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 19:01:17.580 [INFO] interaction-service pid[4367]: grpc server started listening on [:31002]
+2026-05-03 19:14:16.454 [INFO] interaction-service signal received: interrupt, gracefully shutting down
+2026-05-03 19:14:16.454 [DEBU] interaction-service service deregister: &{Service:0xc000301730 Endpoints:127.0.0.1:31002 Metadata:map[UpdateAt:2026-05-03 19:01:17 protocol:grpc]}
+2026-05-03 19:15:00.205 [DEBU] interaction-service service register: &{Head: Deployment: Namespace: Name:interaction Version: Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 19:15:00.206 [INFO] interaction-service pid[4710]: grpc server started listening on [:31002]
+2026-05-03 19:22:25.300 [INFO] interaction-service signal received: interrupt, gracefully shutting down
+2026-05-03 19:22:25.300 [DEBU] interaction-service service deregister: &{Service:0xc000367730 Endpoints:127.0.0.1:31002 Metadata:map[UpdateAt:2026-05-03 19:15:00 protocol:grpc]}
+2026-05-03 19:22:28.180 [DEBU] interaction-service service register: &{Head: Deployment: Namespace: Name:interaction Version: Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 19:22:28.180 [INFO] interaction-service pid[5066]: grpc server started listening on [:31002]
+2026-05-03 19:23:29.731 [INFO] interaction-service signal received: interrupt, gracefully shutting down
+2026-05-03 19:23:29.732 [DEBU] interaction-service service deregister: &{Service:0xc0002ad730 Endpoints:127.0.0.1:31002 Metadata:map[UpdateAt:2026-05-03 19:22:28 protocol:grpc]}
+2026-05-03 19:26:09.139 [DEBU] interaction-service service register: &{Head: Deployment: Namespace: Name:interaction Version: Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 19:26:09.143 [INFO] interaction-service pid[6633]: grpc server started listening on [:31002]
+2026-05-03 19:28:01.822 [INFO] interaction-service signal received: interrupt, gracefully shutting down
+2026-05-03 19:28:01.822 [DEBU] interaction-service service deregister: &{Service:0xc00034ca80 Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 19:28:05.492 [DEBU] interaction-service service register: &{Head: Deployment: Namespace: Name:interaction Version: Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 19:28:05.498 [INFO] interaction-service pid[6899]: grpc server started listening on [:31002]
+2026-05-03 19:52:16.081 [DEBU] interaction-service service register: &{Head: Deployment: Namespace: Name:interaction Version: Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 19:52:16.090 [INFO] interaction-service pid[4409]: grpc server started listening on [:31002]
+2026-05-03 19:52:23.376 [INFO] interaction-service signal received: interrupt, gracefully shutting down
+2026-05-03 19:52:23.376 [DEBU] interaction-service service deregister: &{Service:0xc00014ce00 Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 19:52:43.337 [DEBU] interaction-service service register: &{Head: Deployment: Namespace: Name:interaction Version: Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 19:52:43.340 [INFO] interaction-service pid[4655]: grpc server started listening on [:31002]
+2026-05-03 19:59:16.196 [INFO] interaction-service signal received: interrupt, gracefully shutting down
+2026-05-03 19:59:16.196 [DEBU] interaction-service service deregister: &{Service:0xc0003c4690 Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 21:11:59.975 [DEBU] interaction-service service register: &{Head: Deployment: Namespace: Name:interaction Version: Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}
+2026-05-03 21:11:59.978 [INFO] interaction-service pid[32597]: grpc server started listening on [:31002]
+2026-05-03 22:09:52.211 [INFO] interaction-service signal received: interrupt, gracefully shutting down
+2026-05-03 22:09:52.213 [DEBU] interaction-service service deregister: &{Service:0xc0003ac700 Endpoints:127.0.0.1:31002 Metadata:map[protocol:grpc]}

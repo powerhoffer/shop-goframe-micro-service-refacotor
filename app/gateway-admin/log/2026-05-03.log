@@ -1,0 +1,42 @@
+2026-05-03 23:24:02.440 [INFO] gateway-admin pid[59000]: http server started listening on [:8299]
+2026-05-03 23:24:02.440 [INFO] gateway-admin swagger ui is serving at address: http://127.0.0.1:8299/swagger/
+2026-05-03 23:24:02.440 [INFO] gateway-admin openapi specification is serving at address: http://127.0.0.1:8299/api.json
+2026-05-03 23:24:02.441 [DEBU] gateway-admin service register: &{Head: Deployment: Namespace: Name:default Version: Endpoints:192.168.72.71:8299 Metadata:map[insecure:true protocol:http]}
+
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |          ROUTE          |                                                      HANDLER                                                       |           MIDDLEWARE            |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8299   | ALL    | /*                      | shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS                                             | GLOBAL MIDDLEWARE               |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8299   | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                                                              |                                 |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8299   | POST   | /backend/admin/login    | shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoLogin    | ghttp.MiddlewareHandlerResponse |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8299   | POST   | /backend/admin/register | shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoRegister | ghttp.MiddlewareHandlerResponse |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8299   | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                                                                | HOOK_BEFORE_SERVE               |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+
+2026-05-03 23:30:03.825 [DEBU] gateway-admin service deregister: &{Service:0xc0000cf6c0 Endpoints:192.168.72.71:8299 Metadata:map[insecure:true protocol:http]}
+2026-05-03 23:30:03.827 [INFO] gateway-admin pid[59000]: all servers shutdown
+2026-05-03 23:54:59.240 [INFO] gateway-admin pid[64539]: http server started listening on [:8299]
+2026-05-03 23:54:59.240 [INFO] gateway-admin swagger ui is serving at address: http://127.0.0.1:8299/swagger/
+2026-05-03 23:54:59.241 [INFO] gateway-admin openapi specification is serving at address: http://127.0.0.1:8299/api.json
+2026-05-03 23:54:59.242 [DEBU] gateway-admin service register: &{Head: Deployment: Namespace: Name:default Version: Endpoints:192.168.72.71:8299 Metadata:map[insecure:true protocol:http]}
+
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |          ROUTE          |                                                      HANDLER                                                       |           MIDDLEWARE            |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8299   | ALL    | /*                      | shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS                                             | GLOBAL MIDDLEWARE               |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8299   | ALL    | /api.json               | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                                                              |                                 |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8299   | POST   | /backend/admin/login    | shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoLogin    | ghttp.MiddlewareHandlerResponse |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8299   | POST   | /backend/admin/register | shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoRegister | ghttp.MiddlewareHandlerResponse |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8299   | POST   | /backend/upload/image   | shop-goframe-micro-service-refacotor/app/gateway-admin/api/file.IFileV1.UploadImage                                | ghttp.MiddlewareHandlerResponse |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8299   | ALL    | /swagger/*              | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                                                                | HOOK_BEFORE_SERVE               |
+----------|--------|-------------------------|--------------------------------------------------------------------------------------------------------------------|----------------------------------
+

@@ -1,0 +1,236 @@
+2026-05-03 00:32:24.391 [INFO] user-service swagger ui is serving at address: http://127.0.0.1:8199/swagger/
+2026-05-03 00:32:24.391 [INFO] user-service openapi specification is serving at address: http://127.0.0.1:8199/api.json
+2026-05-03 00:32:24.391 [INFO] user-service pid[44789]: http server started listening on [:8199]
+2026-05-03 00:32:24.394 [DEBU] user-service service register: &{Head: Deployment: Namespace: Name:default Version: Endpoints:192.168.72.71:8199 Metadata:map[insecure:true protocol:http]}
+
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |        ROUTE        |                                                      HANDLER                                                      |           MIDDLEWARE            |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /*                  | shop-goframe-micro-service-refacotor/utility.MiddlewareCORS                                                       | GLOBAL MIDDLEWARE               |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /api.json           | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                                                             |                                 |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | DELETE | /frontend/consignee | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoDelete  | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/consignee | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/consignee | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoCreate  | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | PUT    | /frontend/consignee | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoUpdate  | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /swagger/*          | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                                                               | HOOK_BEFORE_SERVE               |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+
+2026-05-03 00:46:38.489 [DEBU] user-service service deregister: &{Service:0xc000251960 Endpoints:192.168.72.71:8199 Metadata:map[insecure:true protocol:http]}
+2026-05-03 00:46:38.490 [INFO] user-service pid[44789]: all servers shutdown
+2026-05-03 15:51:40.744 [INFO] user-service swagger ui is serving at address: http://127.0.0.1:8199/swagger/
+2026-05-03 15:51:40.745 [INFO] user-service openapi specification is serving at address: http://127.0.0.1:8199/api.json
+2026-05-03 15:51:40.745 [INFO] user-service pid[48688]: http server started listening on [:8199]
+2026-05-03 15:51:40.747 [DEBU] user-service service register: &{Head: Deployment: Namespace: Name:default Version: Endpoints:192.168.72.71:8199 Metadata:map[insecure:true protocol:http]}
+
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |        ROUTE        |                                                      HANDLER                                                      |           MIDDLEWARE            |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /*                  | shop-goframe-micro-service-refacotor/utility.MiddlewareCORS                                                       | GLOBAL MIDDLEWARE               |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /api.json           | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                                                             |                                 |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | DELETE | /frontend/consignee | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoDelete  | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/consignee | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/consignee | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoCreate  | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | PUT    | /frontend/consignee | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoUpdate  | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /swagger/*          | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                                                               | HOOK_BEFORE_SERVE               |
+----------|--------|---------------------|-------------------------------------------------------------------------------------------------------------------|----------------------------------
+
+2026-05-03 15:53:23.595 [DEBU] user-service service deregister: &{Service:0xc00031a620 Endpoints:192.168.72.71:8199 Metadata:map[insecure:true protocol:http]}
+2026-05-03 15:53:23.596 [INFO] user-service pid[48688]: all servers shutdown
+2026-05-03 16:52:31.074 [INFO] user-service swagger ui is serving at address: http://127.0.0.1:8199/swagger/
+2026-05-03 16:52:31.074 [INFO] user-service pid[69197]: http server started listening on [:8199]
+2026-05-03 16:52:31.075 [INFO] user-service openapi specification is serving at address: http://127.0.0.1:8199/api.json
+2026-05-03 16:52:31.078 [DEBU] user-service service register: &{Head: Deployment: Namespace: Name:default Version: Endpoints:192.168.72.71:8199 Metadata:map[insecure:true protocol:http]}
+
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |             ROUTE              |                                                       HANDLER                                                       |           MIDDLEWARE            |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /*                             | shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS                                              | GLOBAL MIDDLEWARE               |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /api.json                      | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                                                               |                                 |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | DELETE | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoDelete    | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList   | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoCreate    | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | PUT    | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoUpdate    | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/user/info            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfo               | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/user/login           | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoLogin          | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/user/register        | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoRegister       | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | PUT    | /frontend/user/update/password | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoUpdatePassword | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /swagger/*                     | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                                                                 | HOOK_BEFORE_SERVE               |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+
+2026-05-03 17:11:18.836 [DEBU] user-service service deregister: &{Service:0xc0000f09a0 Endpoints:192.168.72.71:8199 Metadata:map[insecure:true protocol:http]}
+2026-05-03 17:11:18.838 [INFO] user-service pid[69197]: all servers shutdown
+2026-05-03 17:11:25.513 [INFO] user-service swagger ui is serving at address: http://127.0.0.1:8199/swagger/
+2026-05-03 17:11:25.513 [INFO] user-service openapi specification is serving at address: http://127.0.0.1:8199/api.json
+2026-05-03 17:11:25.513 [INFO] user-service pid[70708]: http server started listening on [:8199]
+2026-05-03 17:11:25.516 [DEBU] user-service service register: &{Head: Deployment: Namespace: Name:default Version: Endpoints:192.168.72.71:8199 Metadata:map[insecure:true protocol:http]}
+
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |             ROUTE              |                                                       HANDLER                                                       |           MIDDLEWARE            |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /*                             | shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS                                              | GLOBAL MIDDLEWARE               |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /api.json                      | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                                                               |                                 |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | DELETE | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoDelete    | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList   | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoCreate    | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | PUT    | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoUpdate    | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/user/info            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfo               | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/user/login           | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoLogin          | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/user/register        | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoRegister       | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | PUT    | /frontend/user/update/password | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoUpdatePassword | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /swagger/*                     | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                                                                 | HOOK_BEFORE_SERVE               |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------|----------------------------------
+
+2026-05-03 17:13:04.145 [DEBU] user-service service deregister: &{Service:0xc0002b1a40 Endpoints:192.168.72.71:8199 Metadata:map[insecure:true protocol:http]}
+2026-05-03 17:13:04.147 [INFO] user-service pid[70708]: all servers shutdown
+2026-05-03 21:09:58.007 [INFO] user-service swagger ui is serving at address: http://127.0.0.1:8199/swagger/
+2026-05-03 21:09:58.007 [INFO] user-service pid[31837]: http server started listening on [:8199]
+2026-05-03 21:09:58.008 [INFO] user-service openapi specification is serving at address: http://127.0.0.1:8199/api.json
+2026-05-03 21:09:58.013 [DEBU] user-service service register: &{Head: Deployment: Namespace: Name:default Version: Endpoints:192.168.72.71:8199 Metadata:map[insecure:true protocol:http]}
+
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |             ROUTE              |                                                          HANDLER                                                          |           MIDDLEWARE            |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /*                             | shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS                                                    | GLOBAL MIDDLEWARE               |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /api.json                      | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                                                                     |                                 |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | DELETE | /frontend/collection           | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).CollectionInfoDelete  | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/collection           | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).CollectionInfoGetList | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/collection           | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).CollectionInfoCreate  | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | DELETE | /frontend/comment              | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).CommentInfoDelete     | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/comment              | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).CommentInfoGetList    | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/comment              | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).CommentInfoCreate     | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | DELETE | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoDelete          | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList         | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoCreate          | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | PUT    | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoUpdate          | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | DELETE | /frontend/praise               | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).PraiseInfoDelete      | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/praise               | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).PraiseInfoGetList     | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/praise               | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).PraiseInfoCreate      | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/user/info            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfo                     | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/user/login           | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoLogin                | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/user/register        | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoRegister             | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | PUT    | /frontend/user/update/password | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoUpdatePassword       | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /swagger/*                     | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                                                                       | HOOK_BEFORE_SERVE               |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+
+2026-05-03 22:09:57.718 [DEBU] user-service service deregister: &{Service:0xc0002b6070 Endpoints:192.168.72.71:8199 Metadata:map[insecure:true protocol:http]}
+2026-05-03 22:09:57.720 [INFO] user-service pid[31837]: all servers shutdown
+2026-05-03 23:25:26.703 [INFO] user-service swagger ui is serving at address: http://127.0.0.1:8199/swagger/
+2026-05-03 23:25:26.704 [INFO] user-service openapi specification is serving at address: http://127.0.0.1:8199/api.json
+2026-05-03 23:25:26.704 [INFO] user-service pid[59696]: http server started listening on [:8199]
+2026-05-03 23:25:26.709 [DEBU] user-service service register: &{Head: Deployment: Namespace: Name:default Version: Endpoints:192.168.72.71:8199 Metadata:map[insecure:true protocol:http]}
+
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |             ROUTE              |                                                          HANDLER                                                          |           MIDDLEWARE            |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /*                             | shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS                                                    | GLOBAL MIDDLEWARE               |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /api.json                      | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                                                                     |                                 |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | DELETE | /frontend/collection           | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).CollectionInfoDelete  | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/collection           | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).CollectionInfoGetList | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/collection           | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).CollectionInfoCreate  | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | DELETE | /frontend/comment              | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).CommentInfoDelete     | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/comment              | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).CommentInfoGetList    | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/comment              | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).CommentInfoCreate     | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | DELETE | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoDelete          | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoGetList         | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoCreate          | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | PUT    | /frontend/consignee            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).ConsigneeInfoUpdate          | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | DELETE | /frontend/praise               | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).PraiseInfoDelete      | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/praise               | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).PraiseInfoGetList     | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/praise               | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction.(*ControllerV1).PraiseInfoCreate      | ghttp.MiddlewareHandlerResponse |
+|         |        |                                |                                                                                                                           | middleware.JWTAuth              |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | GET    | /frontend/user/info            | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfo                     | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/user/login           | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoLogin                | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | POST   | /frontend/user/register        | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoRegister             | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | PUT    | /frontend/user/update/password | shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoUpdatePassword       | ghttp.MiddlewareHandlerResponse |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8199   | ALL    | /swagger/*                     | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                                                                       | HOOK_BEFORE_SERVE               |
+----------|--------|--------------------------------|---------------------------------------------------------------------------------------------------------------------------|----------------------------------
+
+2026-05-03 23:30:01.475 [DEBU] user-service service deregister: &{Service:0xc00041a1c0 Endpoints:192.168.72.71:8199 Metadata:map[insecure:true protocol:http]}
+2026-05-03 23:30:01.476 [INFO] user-service pid[59696]: all servers shutdown

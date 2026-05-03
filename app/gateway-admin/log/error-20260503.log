@@ -1,0 +1,48 @@
+2026-05-03 23:28:41.756 {1726ade5cc17ac18ebb19a7b84e022a4} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/admin/register HTTP/1.1" 58174.532, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 52, "", ""
+Stack:
+1. AdminInfo Register 注册失败: 用户名已存在
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/admin/api/admin_info/v1.(*adminInfoClient).Register
+        /home/lxh/shop-goframe-micro-service-refacotor/app/admin/api/admin_info/v1/admin_info_grpc.pb.go:47
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoRegister
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin/admin_v1_admin_info_register.go:20
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 23:57:48.899 {6240f25e6119ac184cfc7040d8c1d2af} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/admin/login HTTP/1.1" 10001357.662, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", ""
+Stack:
+1. 登录失败
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoLogin
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin/admin_v1_admin_info_login.go:28
+2. context deadline exceeded
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/admin/api/admin_info/v1.(*adminInfoClient).Login
+        /home/lxh/shop-goframe-micro-service-refacotor/app/admin/api/admin_info/v1/admin_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoLogin
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin/admin_v1_admin_info_login.go:23
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 23:58:08.012 {c4e10fd26519ac184dfc70408b521e2f} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/admin/login HTTP/1.1" 10001508.712, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", ""
+Stack:
+1. 登录失败
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoLogin
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin/admin_v1_admin_info_login.go:28
+2. context deadline exceeded
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/admin/api/admin_info/v1.(*adminInfoClient).Login
+        /home/lxh/shop-goframe-micro-service-refacotor/app/admin/api/admin_info/v1/admin_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoLogin
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin/admin_v1_admin_info_login.go:23
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-03 23:59:18.598 {dcd568957819ac184ffc70406a6e27ac} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/upload/image HTTP/1.1" 783.108, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 68, "Internal Panic", ""
+Stack:
+1. reflect.Value.Convert: value of type string cannot be converted to type ghttp.UploadFile
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+

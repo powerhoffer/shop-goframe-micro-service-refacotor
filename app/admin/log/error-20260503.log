@@ -1,0 +1,1 @@
+2026-05-03 23:28:41.755 [ERRO] {1726ade5cc17ac18ebb19a7b84e022a4} admin-service /admin_info.v1.AdminInfo/Register, 49.844ms, 52, "AdminInfo Register 注册失败: 用户名已存在", name:"张3"  password:"111111", <nil>, -1, "", "", rpc error: code = Code(52) desc = AdminInfo Register 注册失败: 用户名已存在
