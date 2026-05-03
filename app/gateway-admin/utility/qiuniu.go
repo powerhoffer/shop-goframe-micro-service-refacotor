@@ -47,7 +47,7 @@ func UploadToQiniu(ctx context.Context, fileContent []byte, filename string) (st
 		fileExt = "jpg" // 默认扩展名
 	}
 
-	// 生成保留原始文件名的唯一文件名
+	// 生成保留原始文件名的唯一文件名的
 	key := generateUniqueFilename(filename)
 	// 创建表单上传器
 	formUploader := storage.NewFormUploader(&cfgUpload)
