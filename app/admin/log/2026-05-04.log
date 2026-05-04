@@ -1,2 +1,14 @@
 2026-05-04 00:05:47.436 [INFO] admin-service signal received: interrupt, gracefully shutting down
 2026-05-04 00:05:47.437 [DEBU] admin-service service deregister: &{Service:0xc0000f88c0 Endpoints:127.0.0.1:31003 Metadata:map[protocol:grpc]}
+2026-05-04 11:18:00.667 [DEBU] admin-service service register: &{Head: Deployment: Namespace: Name:admin Version: Endpoints:127.0.0.1:31003 Metadata:map[protocol:grpc]}
+2026-05-04 11:18:00.671 [INFO] admin-service pid[8109]: grpc server started listening on [:31003]
+2026-05-04 11:21:19.465 [INFO] admin-service signal received: interrupt, gracefully shutting down
+2026-05-04 11:21:19.465 [DEBU] admin-service service deregister: &{Service:0xc00035c690 Endpoints:127.0.0.1:31003 Metadata:map[protocol:grpc]}
+2026-05-04 11:21:22.266 [DEBU] admin-service service register: &{Head: Deployment: Namespace: Name:admin Version: Endpoints:127.0.0.1:31003 Metadata:map[protocol:grpc]}
+2026-05-04 11:21:22.269 [INFO] admin-service pid[8447]: grpc server started listening on [:31003]
+2026-05-04 11:31:10.364 [INFO] admin-service signal received: interrupt, gracefully shutting down
+2026-05-04 11:31:10.365 [DEBU] admin-service service deregister: &{Service:0xc0000ccd20 Endpoints:127.0.0.1:31003 Metadata:map[protocol:grpc]}
+2026-05-04 11:31:50.101 [DEBU] admin-service service register: &{Head: Deployment: Namespace: Name:admin Version: Endpoints:127.0.0.1:31003 Metadata:map[protocol:grpc]}
+2026-05-04 11:31:50.104 [INFO] admin-service pid[10039]: grpc server started listening on [:31003]
+2026-05-04 11:33:28.181 [INFO] admin-service signal received: interrupt, gracefully shutting down
+2026-05-04 11:33:28.182 [DEBU] admin-service service deregister: &{Service:0xc000402620 Endpoints:127.0.0.1:31003 Metadata:map[protocol:grpc]}
