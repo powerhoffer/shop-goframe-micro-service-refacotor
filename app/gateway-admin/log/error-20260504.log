@@ -1,0 +1,157 @@
+2026-05-04 15:28:49.093 {3d7a60a7314cac18ad80dc710d347f57} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/upload/image HTTP/1.1" 44542.643, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-04 15:29:11.434 {0b9fa8da364cac18af80dc718fd292e8} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/upload/image HTTP/1.1" 49667.558, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", ""
+Stack:
+1. 上传到七牛云失败
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/file.(*ControllerV1).UploadImage
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/file/file_v1_upload_image.go:40
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   3).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+2. 七牛云配置缺失
+
+2026-05-04 15:30:34.976 {53ec1d424a4cac18d883e03d23662854} gateway-admin 500 "POST http 127.0.0.1:8299 /backend/upload/image HTTP/1.1" 252336.248, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 56, "Invalid Configuration", ""
+Stack:
+1. cannot find database driver for specified database type "mysql", did you misspell type name "mysql" or forget importing the database driver? possible reference: https://github.com/gogf/gf/tree/master/contrib/drivers
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/dao/internal.(*FileInfoDao).DB
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/dao/internal/file_info.go:54
+   2).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/dao/internal.(*FileInfoDao).Ctx
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/dao/internal/file_info.go:74
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/logic/file_info.UploadImage
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/logic/file_info/file_info.go:18
+   4).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/file.(*ControllerV1).UploadImage
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/file/file_v1_upload_image.go:50
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   6).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-04 16:44:55.391 {2e6661825650ac183a14760d2962d3dd} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/admin/login HTTP/1.1" 10002188.869, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", ""
+Stack:
+1. 登录失败
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoLogin
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin/admin_v1_admin_info_login.go:28
+2. context deadline exceeded
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/admin/api/admin_info/v1.(*adminInfoClient).Login
+        /home/lxh/shop-goframe-micro-service-refacotor/app/admin/api/admin_info/v1/admin_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoLogin
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin/admin_v1_admin_info_login.go:23
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-04 16:45:07.880 {116fd66a5950ac183b14760d8386083c} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/admin/login HTTP/1.1" 10001170.258, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", ""
+Stack:
+1. 登录失败
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoLogin
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin/admin_v1_admin_info_login.go:28
+2. context deadline exceeded
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/admin/api/admin_info/v1.(*adminInfoClient).Login
+        /home/lxh/shop-goframe-micro-service-refacotor/app/admin/api/admin_info/v1/admin_info_grpc.pb.go:38
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin.(*ControllerV1).AdminInfoLogin
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin/admin_v1_admin_info_login.go:23
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-04 16:46:28.798 {09de06966e50ac183e14760dcdf0403c} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/goods/images?page=1&size=10 HTTP/1.1" 303.878, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-04 16:46:56.745 {00dcc6177550ac184014760d6a639b5f} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/goods/images HTTP/1.1" 375.234, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 51, "Validation Failed", ""
+Stack:
+The url field is required
+2026-05-04 16:47:41.354 {7097b27a7f50ac184214760d5292146f} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/goods HTTP/1.1" 404.349, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 51, "Validation Failed", ""
+Stack:
+The images field is required
+2026-05-04 16:49:07.456 {9601b5869350ac184514760d1a8cbb87} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/goods HTTP/1.1" 1044.423, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-04 16:49:16.721 {847493ae9550ac184614760d9862b707} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/goods HTTP/1.1" 8050.121, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 52, "", ""
+Stack:
+1. GoodsInfo Create 插入失败: INSERT INTO `goods_info`(`name`,`images`,`price`,`level1_category_id`,`level2_category_id`,`level3_category_id`,`brand`,`stock`,`sale`,`tags`,`detail_info`,`created_at`,`updated_at`) VALUES('红牛','https://loremflickr.com/400/400?lock=5831113179064886',4,25,6,40,'enim in pariatur mollit fugiat',51,37,'consectetur eiusmod','exercitation cupidatat irure esse anim','2026-05-04 16:49:16','2026-05-04 16:49:16') : Error 3140 (22032): Invalid JSON text: "Invalid value." at position 0 in value for column 'goods_info.images'.
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1.(*goodsInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1/goods_info_grpc.pb.go:62
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_create.go:19
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-04 16:49:44.931 {5b833e409c50ac184714760d20a55d39} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/goods HTTP/1.1" 3861.212, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 52, "", ""
+Stack:
+1. GoodsInfo Create 插入失败: INSERT INTO `goods_info`(`name`,`images`,`price`,`level1_category_id`,`level2_category_id`,`level3_category_id`,`brand`,`stock`,`sale`,`tags`,`detail_info`,`created_at`,`updated_at`) VALUES('红牛','https://loremflickr.com/400/400?lock=5831113179064886',4,2,2,4,'enim in pariatur mollit fugiat',51,37,'consectetur eiusmod','exercitation cupidatat irure esse anim','2026-05-04 16:49:44','2026-05-04 16:49:44') : Error 3140 (22032): Invalid JSON text: "Invalid value." at position 0 in value for column 'goods_info.images'.
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1.(*goodsInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1/goods_info_grpc.pb.go:62
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_create.go:19
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-04 16:51:22.582 {6e8faafcb250ac184814760d4881d6a4} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/goods HTTP/1.1" 5017.323, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 52, "", ""
+Stack:
+1. GoodsInfo Create 插入失败: INSERT INTO `goods_info`(`name`,`images`,`price`,`level1_category_id`,`level2_category_id`,`level3_category_id`,`brand`,`stock`,`sale`,`tags`,`detail_info`,`created_at`,`updated_at`) VALUES('红牛','https://loremflickr.com/400/400?lock=5831113179064886',4,1,2,3,'enim in pariatur mollit fugiat',11,2,'consectetur eiusmod','exercitation cupidatat irure esse anim','2026-05-04 16:51:22','2026-05-04 16:51:22') : Error 3140 (22032): Invalid JSON text: "Invalid value." at position 0 in value for column 'goods_info.images'.
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1.(*goodsInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1/goods_info_grpc.pb.go:62
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_create.go:19
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-04 16:52:33.398 {b6019f79c350ac184914760da48e4014} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/goods HTTP/1.1" 5013.345, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 52, "", ""
+Stack:
+1. GoodsInfo Create 插入失败: INSERT INTO `goods_info`(`name`,`images`,`price`,`level1_category_id`,`level2_category_id`,`level3_category_id`,`brand`,`stock`,`sale`,`tags`,`detail_info`,`created_at`,`updated_at`) VALUES('红牛','[https://loremflickr.com/400/400?lock=5831113179064886]',4,1,2,3,'enim in pariatur mollit fugiat',11,2,'consectetur eiusmod','exercitation cupidatat irure esse anim','2026-05-04 16:52:33','2026-05-04 16:52:33') : Error 3140 (22032): Invalid JSON text: "Invalid value." at position 1 in value for column 'goods_info.images'.
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1.(*goodsInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1/goods_info_grpc.pb.go:62
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_create.go:19
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-04 16:52:54.202 {a675bf51c850ac184a14760d1febbdcf} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/goods HTTP/1.1" 3025.369, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 52, "", ""
+Stack:
+1. GoodsInfo Create 插入失败: INSERT INTO `goods_info`(`name`,`images`,`price`,`level1_category_id`,`level2_category_id`,`level3_category_id`,`brand`,`stock`,`sale`,`tags`,`detail_info`,`created_at`,`updated_at`) VALUES('红牛','\'[https://loremflickr.com/400/400?lock=5831113179064886]\'',4,1,2,3,'enim in pariatur mollit fugiat',11,2,'consectetur eiusmod','exercitation cupidatat irure esse anim','2026-05-04 16:52:54','2026-05-04 16:52:54') : Error 3140 (22032): Invalid JSON text: "Invalid value." at position 0 in value for column 'goods_info.images'.
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1.(*goodsInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1/goods_info_grpc.pb.go:62
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_create.go:19
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+

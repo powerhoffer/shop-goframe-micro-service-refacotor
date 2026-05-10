@@ -1,0 +1,57 @@
+2026-05-04 16:16:16.689 [INFO] gateway-resource pid[63496]: http server started listening on [:8399]
+2026-05-04 16:16:16.689 [INFO] gateway-resource swagger ui is serving at address: http://127.0.0.1:8399/swagger/
+2026-05-04 16:16:16.690 [INFO] gateway-resource openapi specification is serving at address: http://127.0.0.1:8399/api.json
+2026-05-04 16:16:16.690 [DEBU] gateway-resource service register: &{Head: Deployment: Namespace: Name:default Version: Endpoints:192.168.72.71:8399 Metadata:map[insecure:true protocol:http]}
+
+----------|--------|-----------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |         ROUTE         |                                                    HANDLER                                                     |           MIDDLEWARE            |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8399   | ALL    | /*                    | shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS                                         | GLOBAL MIDDLEWARE               |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8399   | ALL    | /api.json             | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                                                          |                                 |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8399   | POST   | /backend/upload/image | shop-goframe-micro-service-refacotor/app/gateway-resource/internal/controller/file.(*ControllerV1).UploadImage | ghttp.MiddlewareHandlerResponse |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------
+| :8399   | ALL    | /swagger/*            | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                                                            | HOOK_BEFORE_SERVE               |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------------------------------|----------------------------------
+
+2026-05-04 16:17:14.343 [DEBU] gateway-resource service deregister: &{Service:0xc0000f0a10 Endpoints:192.168.72.71:8399 Metadata:map[insecure:true protocol:http]}
+2026-05-04 16:17:14.345 [INFO] gateway-resource pid[63496]: all servers shutdown
+2026-05-04 16:17:19.243 [INFO] gateway-resource swagger ui is serving at address: http://127.0.0.1:8399/swagger/
+2026-05-04 16:17:19.243 [INFO] gateway-resource openapi specification is serving at address: http://127.0.0.1:8399/api.json
+2026-05-04 16:17:19.243 [INFO] gateway-resource pid[63724]: http server started listening on [:8399]
+2026-05-04 16:17:19.244 [DEBU] gateway-resource service register: &{Head: Deployment: Namespace: Name:default Version: Endpoints:192.168.72.71:8399 Metadata:map[insecure:true protocol:http]}
+
+----------|--------|-----------------------|----------------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |         ROUTE         |                                        HANDLER                                         |           MIDDLEWARE            |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------|----------------------------------
+| :8399   | ALL    | /*                    | shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS                 | GLOBAL MIDDLEWARE               |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------|----------------------------------
+| :8399   | ALL    | /api.json             | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                                  |                                 |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------|----------------------------------
+| :8399   | POST   | /backend/upload/image | shop-goframe-micro-service-refacotor/app/gateway-resource/api/file.IFileV1.UploadImage | ghttp.MiddlewareHandlerResponse |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------|----------------------------------
+| :8399   | ALL    | /swagger/*            | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                                    | HOOK_BEFORE_SERVE               |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------|----------------------------------
+
+2026-05-04 16:18:02.595 [DEBU] gateway-resource service deregister: &{Service:0xc000120230 Endpoints:192.168.72.71:8399 Metadata:map[insecure:true protocol:http]}
+2026-05-04 16:18:02.596 [INFO] gateway-resource pid[63724]: all servers shutdown
+2026-05-04 16:20:34.470 [INFO] gateway-resource pid[64617]: http server started listening on [:8399]
+2026-05-04 16:20:34.470 [INFO] gateway-resource swagger ui is serving at address: http://127.0.0.1:8399/swagger/
+2026-05-04 16:20:34.470 [INFO] gateway-resource openapi specification is serving at address: http://127.0.0.1:8399/api.json
+2026-05-04 16:20:34.471 [DEBU] gateway-resource service register: &{Head: Deployment: Namespace: Name:default Version: Endpoints:192.168.72.71:8399 Metadata:map[insecure:true protocol:http]}
+
+----------|--------|-----------------------|----------------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |         ROUTE         |                                        HANDLER                                         |           MIDDLEWARE            |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------|----------------------------------
+| :8399   | ALL    | /*                    | shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS                 | GLOBAL MIDDLEWARE               |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------|----------------------------------
+| :8399   | ALL    | /api.json             | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                                  |                                 |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------|----------------------------------
+| :8399   | POST   | /backend/upload/image | shop-goframe-micro-service-refacotor/app/gateway-resource/api/file.IFileV1.UploadImage | ghttp.MiddlewareHandlerResponse |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------|----------------------------------
+| :8399   | ALL    | /swagger/*            | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                                    | HOOK_BEFORE_SERVE               |
+----------|--------|-----------------------|----------------------------------------------------------------------------------------|----------------------------------
+
+2026-05-04 16:25:27.821 [DEBU] gateway-resource service deregister: &{Service:0xc0002a22a0 Endpoints:192.168.72.71:8399 Metadata:map[insecure:true protocol:http]}
+2026-05-04 16:25:27.823 [INFO] gateway-resource pid[64617]: all servers shutdown

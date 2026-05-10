@@ -1,0 +1,18 @@
+2026-05-10 23:37:10.310 [FATA] admin-service listen tcp :31003: bind: address already in use 
+Stack:
+1.  shop-goframe-micro-service-refacotor/app/admin/internal/cmd.init.func1
+    /home/lxh/shop-goframe-micro-service-refacotor/app/admin/internal/cmd/cmd.go:26
+2.  main.main
+    /home/lxh/shop-goframe-micro-service-refacotor/app/admin/main.go:24
+
+2026-05-10 23:40:24.536 [FATA] admin-service listen tcp :31003: bind: address already in use 
+Stack:
+1.  shop-goframe-micro-service-refacotor/app/admin/internal/cmd.init.func1
+    /home/lxh/shop-goframe-micro-service-refacotor/app/admin/internal/cmd/cmd.go:26
+2.  main.main
+    /home/lxh/shop-goframe-micro-service-refacotor/app/admin/main.go:24
+
+2026-05-10 23:45:47.080 [DEBU] admin-service service register: &{Head: Deployment: Namespace: Name:admin Version: Endpoints:127.0.0.1:31003 Metadata:map[protocol:grpc]}
+2026-05-10 23:45:47.083 [INFO] admin-service pid[16362]: grpc server started listening on [:31003]
+2026-05-10 23:58:35.107 [INFO] admin-service signal received: interrupt, gracefully shutting down
+2026-05-10 23:58:35.107 [DEBU] admin-service service deregister: &{Service:0xc0002860e0 Endpoints:127.0.0.1:31003 Metadata:map[protocol:grpc]}

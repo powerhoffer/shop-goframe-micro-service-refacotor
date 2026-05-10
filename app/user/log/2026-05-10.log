@@ -1,0 +1,7 @@
+2026-05-10 23:13:45.482 [FATA] user-service listen tcp :31001: bind: address already in use 
+Stack:
+1.  shop-goframe-micro-service-refacotor/app/user/internal/cmd.init.func1
+    /home/lxh/shop-goframe-micro-service-refacotor/app/user/internal/cmd/cmd.go:28
+2.  main.main
+    /home/lxh/shop-goframe-micro-service-refacotor/app/user/main.go:24
+

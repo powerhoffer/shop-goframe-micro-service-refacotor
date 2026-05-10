@@ -1,0 +1,4 @@
+2026-05-11 00:03:19.177 [DEBU] admin-service service register: &{Head: Deployment: Namespace: Name:admin Version: Endpoints:127.0.0.1:31003 Metadata:map[protocol:grpc]}
+2026-05-11 00:03:19.180 [INFO] admin-service pid[21341]: grpc server started listening on [:31003]
+2026-05-11 00:05:21.483 [INFO] admin-service signal received: interrupt, gracefully shutting down
+2026-05-11 00:05:21.484 [DEBU] admin-service service deregister: &{Service:0xc000300310 Endpoints:127.0.0.1:31003 Metadata:map[protocol:grpc]}

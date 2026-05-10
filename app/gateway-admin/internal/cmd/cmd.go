@@ -2,8 +2,9 @@ package cmd
 
 import (
 	"context"
+
 	"shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/admin"
-	"shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/file"
+	"shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods"
 	"shop-goframe-micro-service-refacotor/utility/middleware"
 
 	"github.com/gogf/gf/v2/frame/g"
@@ -23,14 +24,13 @@ var (
 				group.Group("/backend", func(group *ghttp.RouterGroup) {
 					group.Bind(
 						admin.NewV1(),
-						file.NewV1().UploadImage,
 					)
 				})
 				// 需要JWT验证的路由
 				group.Group("/backend", func(group *ghttp.RouterGroup) {
 					group.Middleware(middleware.JWTAuth)
 					group.Bind(
-					// 需要认证的接口
+						goods.NewV1(),
 					)
 				})
 			})

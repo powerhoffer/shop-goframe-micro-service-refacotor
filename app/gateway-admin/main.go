@@ -4,6 +4,7 @@ import (
 	"shop-goframe-micro-service-refacotor/app/gateway-admin/internal/cmd"
 	"shop-goframe-micro-service-refacotor/utility/middleware"
 
+	_ "github.com/gogf/gf/contrib/drivers/mysql/v2"
 	"github.com/gogf/gf/contrib/registry/etcd/v2"
 	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
 	"github.com/gogf/gf/v2/frame/g"

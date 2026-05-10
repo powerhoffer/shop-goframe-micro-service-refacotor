@@ -1,0 +1,4 @@
+2026-05-10 23:48:31.040 [DEBU] goods-service service register: &{Head: Deployment: Namespace: Name:goods Version: Endpoints:127.0.0.1:31004 Metadata:map[protocol:grpc]}
+2026-05-10 23:48:31.043 [INFO] goods-service pid[17820]: grpc server started listening on [:31004]
+2026-05-10 23:58:32.958 [INFO] goods-service signal received: interrupt, gracefully shutting down
+2026-05-10 23:58:32.958 [DEBU] goods-service service deregister: &{Service:0xc0000a6cb0 Endpoints:127.0.0.1:31004 Metadata:map[protocol:grpc]}

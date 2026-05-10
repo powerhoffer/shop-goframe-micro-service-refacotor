@@ -1,0 +1,93 @@
+syntax = "proto3";
+
+package goods_info.v1;
+
+option go_package = "shop-goframe-micro-service/app/goods/api/goods_info/v1";
+
+import "pbentity/goods_info.proto";
+
+service goods_info {
+  // 商品列表
+  rpc GetList(GoodsInfoGetListReq) returns (GoodsInfoGetListRes) {}
+  // 商品详情
+  rpc GetDetail(GoodsInfoGetDetailReq) returns (GoodsInfoGetDetailRes) {}
+  // 创建商品
+  rpc Create(GoodsInfoCreateReq) returns (GoodsInfoCreateRes) {}
+  // 修改商品
+  rpc Update(GoodsInfoUpdateReq) returns (GoodsInfoUpdateRes) {}
+  // 删除商品
+  rpc Delete(GoodsInfoDeleteReq) returns (GoodsInfoDeleteRes) {}
+}
+
+message GoodsInfoGetDetailReq {
+  uint32 id = 1;
+}
+
+
+message GoodsInfoGetDetailRes {
+  pbentity.GoodsInfo data = 1;
+}
+
+
+// 新增消息定义
+message GoodsInfoCreateReq {
+  string name = 1;
+  uint64 price = 2;
+  string Images = 3; // 支持单图,多图
+  uint32 level1_category_id = 4;
+  uint32 level2_category_id = 5;
+  uint32 level3_category_id = 6;
+  string brand = 7;
+  uint32 stock = 8;
+  uint32 sale = 9;
+  string tags = 10;
+  string detail_info = 11;
+}
+
+message GoodsInfoCreateRes {
+  uint32 id = 1;
+}
+
+message GoodsInfoUpdateReq {
+  uint32                    Id               = 1;  //
+  string                    Name             = 2;  // 商品名字
+  string                    Images           = 3;  // 支持单图,多图
+  int32                     Price            = 4;  // 价格(分)
+  int32                     Level1CategoryId = 5;  // 1级分类id
+  int32                     Level2CategoryId = 6;  // 2级分类id
+  int32                     Level3CategoryId = 7;  // 3级分类id
+  string                    Brand            = 8;  // 品牌
+  int32                     Stock            = 9;  // 库存
+  int32                     Sale             = 10; // 销量
+  string                    Tags             = 11; // 标签
+  string                    DetailInfo       = 12; // 商品详情
+
+}
+
+message GoodsInfoUpdateRes {
+  uint32 id = 1;
+}
+
+message GoodsInfoDeleteReq {
+  uint32 id = 1;
+}
+
+message GoodsInfoDeleteRes {
+
+}
+
+message GoodsInfoGetListReq {
+  uint32 page = 1;
+  uint32 size = 2;  // 修改：字段编号必须从1开始递增
+}
+
+message GoodsInfoListResponse {
+  repeated pbentity.GoodsInfo list = 1;
+  uint32 page = 2;
+  uint32 size = 3;
+  uint32 total = 4;
+}
+
+message GoodsInfoGetListRes {
+  GoodsInfoListResponse data = 1;
+}
