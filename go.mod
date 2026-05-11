@@ -4,6 +4,7 @@ go 1.25.0
 
 require (
 	github.com/gogf/gf/contrib/drivers/mysql/v2 v2.10.0
+	github.com/gogf/gf/contrib/nosql/redis/v2 v2.10.0
 	github.com/gogf/gf/contrib/registry/etcd/v2 v2.10.0
 	github.com/gogf/gf/contrib/rpc/grpcx/v2 v2.10.0
 	github.com/gogf/gf/v2 v2.10.0
@@ -15,8 +16,10 @@ require (
 
 require (
 	github.com/alex-ant/gomath v0.0.0-20160516115720-89013a210a82 // indirect
+	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/gammazero/toposort v0.1.1 // indirect
 	github.com/gofrs/flock v0.8.1 // indirect
+	github.com/redis/go-redis/v9 v9.12.1 // indirect
 	golang.org/x/sync v0.20.0 // indirect
 	modernc.org/fileutil v1.0.0 // indirect
 )

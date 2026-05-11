@@ -1,3 +1,153 @@
 2026-05-11 00:04:24.893 {659a2ddfcf3fae186cf87913ed747e68} gateway-admin 200 "POST http 127.0.0.1:8299 /backend/goods/images HTTP/1.1" 318.626, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 51, "Validation Failed", ""
 Stack:
 The url field is required
+2026-05-11 16:48:23.265 {dfe7f4359976ae1835b1947db2e340d6} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/goods/detail?id=1 HTTP/1.1" 378.776, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 16:53:20.677 {852bd774de76ae18dae97c39095995f2} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/goods/detail?id=4 HTTP/1.1" 4937.875, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. convert params from "(*pbentity.GoodsInfo)(nil)" to "map[string]any" failed
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoGetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_get_detail.go:28
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   3).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 16:53:53.652 {10021022e676ae18dbe97c39c5c34fdf} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/goods/detail?id=11 HTTP/1.1" 8861.534, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. convert params from "(*pbentity.GoodsInfo)(nil)" to "map[string]any" failed
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoGetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_get_detail.go:28
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   3).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 16:54:02.100 {35cbcc19e876ae18dde97c3935c24e29} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/goods/detail?id=3 HTTP/1.1" 5683.035, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. convert params from "(*pbentity.GoodsInfo)(nil)" to "map[string]any" failed
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoGetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_get_detail.go:28
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   3).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 16:56:25.132 {413809670977ae18dee97c39c2e97e36} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/goods/detail?id=4 HTTP/1.1" 7687.133, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. convert params from "(*pbentity.GoodsInfo)(nil)" to "map[string]any" failed
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoGetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_get_detail.go:28
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   3).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 16:58:36.896 {2c9ed0142877ae18dfe97c393f17ab2f} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/goods/detail?id=4 HTTP/1.1" 7396.482, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. convert params from "(*pbentity.GoodsInfo)(nil)" to "map[string]any" failed
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoGetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_get_detail.go:28
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   3).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 16:58:54.914 {3e5dfc462c77ae18e0e97c395974741f} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/goods/detail?id=5 HTTP/1.1" 3083.753, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. convert params from "(*pbentity.GoodsInfo)(nil)" to "map[string]any" failed
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoGetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_get_detail.go:28
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   3).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 16:59:20.468 {344d123a3277ae18e1e97c39f478da19} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/goods/detail?id=5 HTTP/1.1" 3853.143, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 2, "", ""
+Stack:
+1. 商品不存在
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1.(*goodsInfoClient).GetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1/goods_info_grpc.pb.go:53
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoGetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_get_detail.go:20
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 16:59:53.989 {fd4a99073a77ae18e2e97c393e3ad3b6} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/goods/detail?id=5 HTTP/1.1" 12642.226, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 53, "Invalid Parameter", ""
+Stack:
+1. convert params from "(*pbentity.GoodsInfo)(nil)" to "map[string]any" failed
+   1).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoGetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_get_detail.go:28
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   3).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 16:59:55.142 {9cc5f84c3a77ae18e3e97c397be469af} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/goods/detail?id=5 HTTP/1.1" 1721.421, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 2, "", ""
+Stack:
+1. 商品不存在
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1.(*goodsInfoClient).GetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1/goods_info_grpc.pb.go:53
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoGetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_get_detail.go:20
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 16:59:56.175 {a91f8b8a3a77ae18e4e97c39cedcd90d} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/goods/detail?id=5 HTTP/1.1" 1574.731, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 2, "", ""
+Stack:
+1. 商品不存在
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1.(*goodsInfoClient).GetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/goods/api/goods_info/v1/goods_info_grpc.pb.go:53
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).GoodsInfoGetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_goods_info_get_detail.go:20
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 18:59:19.882 {a66ed878be7dae189cc72350d627eb9a} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/category/all HTTP/1.1" 350.992, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 18:59:32.969 {e94b11e0c07dae189dc7235054172e70} gateway-admin 200 "GET http 127.0.0.1:8299 /backend/category/all HTTP/1.1" 2765333.764, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 1, "", ""
+Stack:
+1. context canceled
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/goods/api/category_info/v1.(*categoryInfoClient).GetAll
+        /home/lxh/shop-goframe-micro-service-refacotor/app/goods/api/category_info/v1/category_info_grpc.pb.go:48
+   3).  shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods.(*ControllerV1).CategoryInfoGetAll
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-admin/internal/controller/goods/goods_v1_category_info_get_all.go:14
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-11 19:01:39.143 {80e373e5de7dae18a1c72350470596e4} gateway-admin 200 "PUT http 127.0.0.1:8299 /backend/goods HTTP/1.1" 254.447, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
