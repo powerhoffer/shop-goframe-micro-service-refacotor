@@ -89,8 +89,9 @@ func createGoodsIndex(ctx context.Context) error {
              "sale": {"type": "long"},
              "tags": {"type": "keyword"},
              "detail_info": {"type": "text"},
-             "created_at": {"type": "date"},
-             "updated_at": {"type": "date"}
+             "created_at": {"type": "date", "format": "strict_date_optional_time||yyyy-MM-dd HH:mm:ss||epoch_millis"},
+             "updated_at": {"type": "date", "format": "strict_date_optional_time||yyyy-MM-dd HH:mm:ss||epoch_millis"},
+			 "deleted_at": {"type": "date", "format": "strict_date_optional_time||yyyy-MM-dd HH:mm:ss||epoch_millis"}
           }
        }
     }`

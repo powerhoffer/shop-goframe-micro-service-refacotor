@@ -41,3 +41,153 @@
 ----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
 
 2026-05-11 22:08:11.231 [INFO] search-service pid[74430]: all servers shutdown
+2026-05-11 22:23:57.102 [INFO] search-service swagger ui is serving at address: http://127.0.0.1:8499/swagger/
+2026-05-11 22:23:57.103 [INFO] search-service openapi specification is serving at address: http://127.0.0.1:8499/api.json
+2026-05-11 22:23:57.103 [INFO] search-service pid[80990]: http server started listening on [:8499]
+
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |     ROUTE     |                                     HANDLER                                      |           MIDDLEWARE            |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /api.json     | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                            |                                 |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | GET    | /search/goods | shop-goframe-micro-service-refacotor/app/search/api/search.ISearchV1.SearchGoods | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /swagger/*    | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                              | HOOK_BEFORE_SERVE               |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+
+2026-05-11 22:25:24.918 [INFO] search-service pid[80990]: all servers shutdown
+2026-05-11 22:25:27.119 [INFO] search-service swagger ui is serving at address: http://127.0.0.1:8499/swagger/
+2026-05-11 22:25:27.119 [INFO] search-service pid[81509]: http server started listening on [:8499]
+2026-05-11 22:25:27.119 [INFO] search-service openapi specification is serving at address: http://127.0.0.1:8499/api.json
+
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |     ROUTE     |                                     HANDLER                                      |           MIDDLEWARE            |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /api.json     | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                            |                                 |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | GET    | /search/goods | shop-goframe-micro-service-refacotor/app/search/api/search.ISearchV1.SearchGoods | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /swagger/*    | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                              | HOOK_BEFORE_SERVE               |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+
+2026-05-11 22:28:49.804 [INFO] search-service pid[81509]: all servers shutdown
+2026-05-11 22:28:52.515 [INFO] search-service swagger ui is serving at address: http://127.0.0.1:8499/swagger/
+2026-05-11 22:28:52.516 [INFO] search-service openapi specification is serving at address: http://127.0.0.1:8499/api.json
+2026-05-11 22:28:52.517 [INFO] search-service pid[82377]: http server started listening on [:8499]
+
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |     ROUTE     |                                     HANDLER                                      |           MIDDLEWARE            |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /api.json     | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                            |                                 |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | GET    | /search/goods | shop-goframe-micro-service-refacotor/app/search/api/search.ISearchV1.SearchGoods | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /swagger/*    | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                              | HOOK_BEFORE_SERVE               |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+
+2026-05-11 22:34:05.760 [INFO] search-service pid[82377]: all servers shutdown
+2026-05-11 22:39:10.445 [INFO] search-service swagger ui is serving at address: http://127.0.0.1:8499/swagger/
+2026-05-11 22:39:10.445 [INFO] search-service openapi specification is serving at address: http://127.0.0.1:8499/api.json
+2026-05-11 22:39:10.445 [INFO] search-service pid[87321]: http server started listening on [:8499]
+
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |     ROUTE     |                                     HANDLER                                      |           MIDDLEWARE            |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /api.json     | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                            |                                 |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | GET    | /search/goods | shop-goframe-micro-service-refacotor/app/search/api/search.ISearchV1.SearchGoods | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /swagger/*    | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                              | HOOK_BEFORE_SERVE               |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+
+2026-05-11 22:39:17.173 [INFO] search-service pid[87321]: all servers shutdown
+2026-05-11 22:43:01.516 [INFO] search-service swagger ui is serving at address: http://127.0.0.1:8499/swagger/
+2026-05-11 22:43:01.516 [INFO] search-service openapi specification is serving at address: http://127.0.0.1:8499/api.json
+2026-05-11 22:43:01.516 [INFO] search-service pid[88409]: http server started listening on [:8499]
+
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |     ROUTE     |                                     HANDLER                                      |           MIDDLEWARE            |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /api.json     | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                            |                                 |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | GET    | /search/goods | shop-goframe-micro-service-refacotor/app/search/api/search.ISearchV1.SearchGoods | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /swagger/*    | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                              | HOOK_BEFORE_SERVE               |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+
+2026-05-11 22:43:08.263 [INFO] search-service pid[88409]: all servers shutdown
+2026-05-11 22:46:51.955 [INFO] search-service swagger ui is serving at address: http://127.0.0.1:8499/swagger/
+2026-05-11 22:46:51.955 [INFO] search-service openapi specification is serving at address: http://127.0.0.1:8499/api.json
+2026-05-11 22:46:51.955 [INFO] search-service pid[89187]: http server started listening on [:8499]
+
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |     ROUTE     |                                     HANDLER                                      |           MIDDLEWARE            |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /api.json     | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                            |                                 |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | GET    | /search/goods | shop-goframe-micro-service-refacotor/app/search/api/search.ISearchV1.SearchGoods | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /swagger/*    | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                              | HOOK_BEFORE_SERVE               |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+
+2026-05-11 22:58:05.997 [INFO] search-service pid[89187]: all servers shutdown
+2026-05-11 22:58:09.370 [INFO] search-service swagger ui is serving at address: http://127.0.0.1:8499/swagger/
+2026-05-11 22:58:09.370 [INFO] search-service openapi specification is serving at address: http://127.0.0.1:8499/api.json
+
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |     ROUTE     |                                     HANDLER                                      |           MIDDLEWARE            |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /api.json     | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                            |                                 |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | GET    | /search/goods | shop-goframe-micro-service-refacotor/app/search/api/search.ISearchV1.SearchGoods | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /swagger/*    | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                              | HOOK_BEFORE_SERVE               |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+
+2026-05-11 22:58:09.370 [INFO] search-service pid[92881]: http server started listening on [:8499]
+2026-05-11 22:59:08.429 [INFO] search-service pid[92881]: all servers shutdown
+2026-05-11 22:59:11.015 [INFO] search-service swagger ui is serving at address: http://127.0.0.1:8499/swagger/
+2026-05-11 22:59:11.016 [INFO] search-service openapi specification is serving at address: http://127.0.0.1:8499/api.json
+2026-05-11 22:59:11.016 [INFO] search-service pid[93282]: http server started listening on [:8499]
+
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |     ROUTE     |                                     HANDLER                                      |           MIDDLEWARE            |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /api.json     | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                            |                                 |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | GET    | /search/goods | shop-goframe-micro-service-refacotor/app/search/api/search.ISearchV1.SearchGoods | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /swagger/*    | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                              | HOOK_BEFORE_SERVE               |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+
+2026-05-11 22:59:33.410 [INFO] search-service pid[93282]: all servers shutdown
+2026-05-11 22:59:49.632 [INFO] search-service swagger ui is serving at address: http://127.0.0.1:8499/swagger/
+2026-05-11 22:59:49.632 [INFO] search-service pid[93662]: http server started listening on [:8499]
+2026-05-11 22:59:49.632 [INFO] search-service openapi specification is serving at address: http://127.0.0.1:8499/api.json
+
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |     ROUTE     |                                     HANDLER                                      |           MIDDLEWARE            |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /api.json     | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                            |                                 |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | GET    | /search/goods | shop-goframe-micro-service-refacotor/app/search/api/search.ISearchV1.SearchGoods | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /swagger/*    | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                              | HOOK_BEFORE_SERVE               |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+
+2026-05-11 23:04:58.665 [INFO] search-service pid[93662]: all servers shutdown
+2026-05-11 23:12:13.285 [INFO] search-service swagger ui is serving at address: http://127.0.0.1:8499/swagger/
+2026-05-11 23:12:13.286 [INFO] search-service openapi specification is serving at address: http://127.0.0.1:8499/api.json
+
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| ADDRESS | METHOD |     ROUTE     |                                     HANDLER                                      |           MIDDLEWARE            |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /api.json     | github.com/gogf/gf/v2/net/ghttp.(*Server).openapiSpec                            |                                 |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | GET    | /search/goods | shop-goframe-micro-service-refacotor/app/search/api/search.ISearchV1.SearchGoods | ghttp.MiddlewareHandlerResponse |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+| :8499   | ALL    | /swagger/*    | github.com/gogf/gf/v2/net/ghttp.(*Server).swaggerUI                              | HOOK_BEFORE_SERVE               |
+----------|--------|---------------|----------------------------------------------------------------------------------|----------------------------------
+
+2026-05-11 23:12:13.287 [INFO] search-service pid[96519]: http server started listening on [:8499]
+2026-05-11 23:13:32.033 [INFO] search-service pid[96519]: all servers shutdown

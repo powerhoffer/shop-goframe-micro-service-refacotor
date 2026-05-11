@@ -1,0 +1,35 @@
+2026-05-11 22:58:21.370 {a929de9ac98aae1834f5742311cb0c65} search-service 200 "GET http 127.0.0.1:8499 /search/goods?keyword=%E5%8F%AF%E4%B9%90&brand&min_price&max_price&sort&page&size HTTP/1.1" 21066.660, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", ""
+Stack:
+1. SearchGoods 搜索失败
+   1).  shop-goframe-micro-service-refacotor/app/search/internal/controller/search.(*ControllerV1).SearchGoods
+        /home/lxh/shop-goframe-micro-service-refacotor/app/search/internal/controller/search/search_v1_search_goods.go:98
+2. elastic: Error 400 (Bad Request): all shards failed [type=search_phase_execution_exception]
+
+2026-05-11 22:58:46.831 {3c233f89cf8aae1835f5742307286a29} search-service 200 "GET http 127.0.0.1:8499 /search/goods?keyword=%E5%8F%AF%E4%B9%90&brand&min_price&max_price&sort&page&size HTTP/1.1" 7786.641, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", ""
+Stack:
+1. SearchGoods 搜索失败
+   1).  shop-goframe-micro-service-refacotor/app/search/internal/controller/search.(*ControllerV1).SearchGoods
+        /home/lxh/shop-goframe-micro-service-refacotor/app/search/internal/controller/search/search_v1_search_goods.go:98
+2. elastic: Error 400 (Bad Request): all shards failed [type=search_phase_execution_exception]
+
+2026-05-11 22:58:52.303 {ceb2b8cfd08aae1836f5742384a96a3f} search-service 200 "GET http 127.0.0.1:8499 /search/goods?keyword=%E5%8F%AF%E4%B9%90&brand&min_price&max_price&sort&page&size HTTP/1.1" 3193.336, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", ""
+Stack:
+1. SearchGoods 搜索失败
+   1).  shop-goframe-micro-service-refacotor/app/search/internal/controller/search.(*ControllerV1).SearchGoods
+        /home/lxh/shop-goframe-micro-service-refacotor/app/search/internal/controller/search/search_v1_search_goods.go:98
+2. elastic: Error 400 (Bad Request): all shards failed [type=search_phase_execution_exception]
+
+2026-05-11 22:58:57.100 {fce498edd18aae1837f57423812c8248} search-service 200 "GET http 127.0.0.1:8499 /search/goods?keyword=%E5%93%87%E5%93%88%E5%93%88&brand&min_price&max_price&sort&page&size HTTP/1.1" 3931.779, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", ""
+Stack:
+1. SearchGoods 搜索失败
+   1).  shop-goframe-micro-service-refacotor/app/search/internal/controller/search.(*ControllerV1).SearchGoods
+        /home/lxh/shop-goframe-micro-service-refacotor/app/search/internal/controller/search/search_v1_search_goods.go:98
+2. elastic: Error 400 (Bad Request): all shards failed [type=search_phase_execution_exception]
+
+2026-05-11 22:59:57.446 {05976efadf8aae18ada4ef6bf83e7141} search-service 200 "GET http 127.0.0.1:8499 /search/goods?keyword=%E5%8F%AF%E4%B9%90&brand&min_price&max_price&sort&page&size HTTP/1.1" 4771.443, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", ""
+Stack:
+1. SearchGoods 搜索失败
+   1).  shop-goframe-micro-service-refacotor/app/search/internal/controller/search.(*ControllerV1).SearchGoods
+        /home/lxh/shop-goframe-micro-service-refacotor/app/search/internal/controller/search/search_v1_search_goods.go:97
+2. elastic: Error 400 (Bad Request): all shards failed [type=search_phase_execution_exception]
+

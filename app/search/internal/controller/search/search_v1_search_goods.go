@@ -42,6 +42,8 @@ func (c *ControllerV1) SearchGoods(ctx context.Context, req *v1.SearchGoodsReq) 
 		matchQuery := elastic.NewMatchQuery("name", req.Keyword)
 		boolQuery.Must(matchQuery)
 	}
+	// 软删除过滤
+	boolQuery.MustNot(elastic.NewExistsQuery("deleted_at"))
 
 	// 品牌筛选
 	if req.Brand != "" {
