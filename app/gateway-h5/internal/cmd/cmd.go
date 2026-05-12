@@ -4,6 +4,7 @@ import (
 	"context"
 	"shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/goods"
 	"shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/interaction"
+	"shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order"
 	"shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user"
 	"shop-goframe-micro-service-refacotor/utility/middleware"
 
@@ -31,6 +32,7 @@ var (
 						// 需要认证的接口
 						interaction.NewV1(),
 						goods.NewV1(),
+						order.NewV1(),
 					)
 				})
 			})

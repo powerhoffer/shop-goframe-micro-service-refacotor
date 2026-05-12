@@ -1,0 +1,3 @@
+2026-05-12 17:12:13.813 {47808dda7ac6ae18ba344227bd89c3d3} user-service 200 "POST http 127.0.0.1:8199 /frontend/order HTTP/1.1" 312.958, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 51, "Validation Failed", ""
+Stack:
+The price field is required
