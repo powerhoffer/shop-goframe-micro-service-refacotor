@@ -1,0 +1,20 @@
+2026-05-12 16:45:04.373 [DEBU] order -service service register: &{Head: Deployment: Namespace: Name:order Version: Endpoints:127.0.0.1:31005 Metadata:map[protocol:grpc]}
+2026-05-12 16:45:04.385 [INFO] order -service pid[14923]: grpc server started listening on [:31005]
+2026-05-12 16:50:55.712 [INFO] order -service signal received: interrupt, gracefully shutting down
+2026-05-12 16:50:55.712 [DEBU] order -service service deregister: &{Service:0xc00040cd90 Endpoints:127.0.0.1:31005 Metadata:map[protocol:grpc]}
+2026-05-12 17:04:02.414 [DEBU] order -service service register: &{Head: Deployment: Namespace: Name:order Version: Endpoints:127.0.0.1:31005 Metadata:map[protocol:grpc]}
+2026-05-12 17:04:02.417 [INFO] order -service pid[22451]: grpc server started listening on [:31005]
+2026-05-12 17:05:57.430 [INFO] order -service signal received: interrupt, gracefully shutting down
+2026-05-12 17:05:57.430 [DEBU] order -service service deregister: &{Service:0xc0003103f0 Endpoints:127.0.0.1:31005 Metadata:map[protocol:grpc]}
+2026-05-12 17:11:18.948 [DEBU] order -service service register: &{Head: Deployment: Namespace: Name:order Version: Endpoints:127.0.0.1:31005 Metadata:map[protocol:grpc]}
+2026-05-12 17:11:18.951 [INFO] order -service pid[26431]: grpc server started listening on [:31005]
+2026-05-12 17:15:39.691 [INFO] order -service signal received: interrupt, gracefully shutting down
+2026-05-12 17:15:39.692 [DEBU] order -service service deregister: &{Service:0xc0002a4f50 Endpoints:127.0.0.1:31005 Metadata:map[protocol:grpc]}
+2026-05-12 19:44:48.597 [DEBU] order -service service register: &{Head: Deployment: Namespace: Name:order Version: Endpoints:127.0.0.1:31005 Metadata:map[protocol:grpc]}
+2026-05-12 19:44:48.606 [INFO] order -service pid[57311]: grpc server started listening on [:31005]
+2026-05-12 19:46:51.588 [INFO] order -service signal received: interrupt, gracefully shutting down
+2026-05-12 19:46:51.588 [DEBU] order -service service deregister: &{Service:0xc0002bab60 Endpoints:127.0.0.1:31005 Metadata:map[protocol:grpc]}
+2026-05-12 19:58:00.700 [DEBU] order -service service register: &{Head: Deployment: Namespace: Name:order Version: Endpoints:127.0.0.1:31005 Metadata:map[protocol:grpc]}
+2026-05-12 19:58:00.703 [INFO] order -service pid[64259]: grpc server started listening on [:31005]
+2026-05-12 20:05:26.359 [INFO] order -service signal received: interrupt, gracefully shutting down
+2026-05-12 20:05:26.360 [DEBU] order -service service deregister: &{Service:0xc0001469a0 Endpoints:127.0.0.1:31005 Metadata:map[protocol:grpc]}
