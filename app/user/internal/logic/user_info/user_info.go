@@ -42,7 +42,7 @@ func Login(ctx context.Context, name, password string) (token string, expireIn i
 	}
 
 	// 5. 生成JWT Token
-	token, expireTime, err := utility.GenerateToken(user.Id)
+	token, expireTime, err := utility.GenerateToken(uint32(user.Id))
 	if err != nil {
 		return "", 0, nil, errors.New("生成token错误")
 	}
@@ -92,7 +92,7 @@ func Register(ctx context.Context, req *entity.UserInfo) (*entity.UserInfo, erro
 	return req, nil
 }
 
-func UpdatePassword(ctx context.Context, userId int, newPassword, secretAnswer string) error {
+func UpdatePassword(ctx context.Context, userId uint32, newPassword, secretAnswer string) error {
 	// 1. 查询用户
 	userRecord, err := dao.UserInfo.Ctx(ctx).Where("id", userId).One()
 	if err != nil {
@@ -130,7 +130,7 @@ func UpdatePassword(ctx context.Context, userId int, newPassword, secretAnswer s
 	return nil
 }
 
-func GetUserInfo(ctx context.Context, userId int) (*entity.UserInfo, error) {
+func GetUserInfo(ctx context.Context, userId uint32) (*entity.UserInfo, error) {
 	// 1. 查询用户
 	userRecord, err := dao.UserInfo.Ctx(ctx).Where("id", userId).One()
 	if err != nil {

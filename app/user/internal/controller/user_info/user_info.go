@@ -82,7 +82,7 @@ func (c *Controller) Register(ctx context.Context, req *v1.UserInfoRegisterReq) 
 
 func (c *Controller) UpdatePassword(ctx context.Context, req *v1.UserInfoUpdatePasswordReq) (*v1.UserInfoUpdatePasswordRes, error) {
 	// 调用logic层修改密码
-	err := v2.UpdatePassword(ctx, int(req.Id), req.Password, req.SecretAnswer)
+	err := v2.UpdatePassword(ctx, uint32(req.Id), req.Password, req.SecretAnswer)
 	// 错误类型
 	infoError := consts.InfoError(consts.UserInfo, consts.UpdatePasswordFail)
 	if err != nil {
@@ -99,7 +99,7 @@ func (c *Controller) UpdatePassword(ctx context.Context, req *v1.UserInfoUpdateP
 
 func (*Controller) GetUserInfo(ctx context.Context, req *v1.UserInfoReq) (res *v1.UserInfoRes, err error) {
 	// 调用logic层获取用户信息
-	userInfo, err := v2.GetUserInfo(ctx, int(req.Id))
+	userInfo, err := v2.GetUserInfo(ctx, uint32(req.Id))
 	// 错误类型
 	infoError := consts.InfoError(consts.UserInfo, consts.GetUserInfoFail)
 	if err != nil {

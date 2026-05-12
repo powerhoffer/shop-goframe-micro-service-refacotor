@@ -1,0 +1,12 @@
+2026-05-12 19:59:18.058 [DEBU] user-service service register: &{Head: Deployment: Namespace: Name:user Version: Endpoints:127.0.0.1:31001 Metadata:map[protocol:grpc]}
+2026-05-12 19:59:18.062 [INFO] user-service pid[65402]: grpc server started listening on [:31001]
+2026-05-12 20:05:11.475 [INFO] user-service signal received: interrupt, gracefully shutting down
+2026-05-12 20:05:11.475 [DEBU] user-service service deregister: &{Service:0xc0003a0770 Endpoints:127.0.0.1:31001 Metadata:map[protocol:grpc]}
+2026-05-12 22:07:01.613 [DEBU] user-service service register: &{Head: Deployment: Namespace: Name:user Version: Endpoints:127.0.0.1:31001 Metadata:map[protocol:grpc]}
+2026-05-12 22:07:01.618 [INFO] user-service pid[95151]: grpc server started listening on [:31001]
+2026-05-12 22:14:52.344 [INFO] user-service signal received: interrupt, gracefully shutting down
+2026-05-12 22:14:52.344 [DEBU] user-service service deregister: &{Service:0xc000234070 Endpoints:127.0.0.1:31001 Metadata:map[protocol:grpc]}
+2026-05-12 22:15:37.786 [DEBU] user-service service register: &{Head: Deployment: Namespace: Name:user Version: Endpoints:127.0.0.1:31001 Metadata:map[protocol:grpc]}
+2026-05-12 22:15:37.791 [INFO] user-service pid[97855]: grpc server started listening on [:31001]
+2026-05-12 22:26:50.657 [INFO] user-service signal received: interrupt, gracefully shutting down
+2026-05-12 22:26:50.657 [DEBU] user-service service deregister: &{Service:0xc00028a0e0 Endpoints:127.0.0.1:31001 Metadata:map[protocol:grpc]}
