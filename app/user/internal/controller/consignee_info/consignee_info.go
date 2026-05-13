@@ -47,6 +47,7 @@ func (*Controller) GetList(ctx context.Context, req *v1.ConsigneeInfoGetListReq)
 
 	// 查询当前页数据
 	consigneeRecords, err := dao.ConsigneeInfo.Ctx(ctx).
+		Where("user_id", req.UserId).
 		Page(int(req.Page), int(req.Size)).
 		All()
 	if err != nil {

@@ -120,3 +120,7 @@ func (*Controller) GetUserInfo(ctx context.Context, req *v1.UserInfoReq) (res *v
 		},
 	}, nil
 }
+
+func (*Controller) UpdateInfo(ctx context.Context, req *v1.UserInfoUpdateReq) (res *v1.UserInfoUpdateRes, err error) {
+	return nil, gerror.NewCode(gcode.CodeNotImplemented)
+}

@@ -28,15 +28,15 @@ type ConsigneeInfoCreateReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	UserId    uint32 `protobuf:"varint,1,opt,name=UserId,proto3" json:"UserId,omitempty"`                              //
-	IsDefault uint32 `protobuf:"varint,2,opt,name=IsDefault,proto3" json:"IsDefault,omitempty" dc:"默认地址1 非默认0"`        // 默认地址1 非默认0
-	Name      string `protobuf:"bytes,3,opt,name=Name,proto3" json:"Name,omitempty"`                                   //
-	Phone     string `protobuf:"bytes,4,opt,name=Phone,proto3" json:"Phone,omitempty"`                                 //
-	Province  string `protobuf:"bytes,5,opt,name=Province,proto3" json:"Province,omitempty"`                           //
-	City      string `protobuf:"bytes,6,opt,name=City,proto3" json:"City,omitempty"`                                   //
-	Town      string `protobuf:"bytes,7,opt,name=Town,proto3" json:"Town,omitempty" dc:"县区" dc:"县区" dc:"县区"`           // 县区
-	Street    string `protobuf:"bytes,8,opt,name=Street,proto3" json:"Street,omitempty" dc:"街道乡镇" dc:"街道乡镇" dc:"街道乡镇"` // 街道乡镇
-	Detail    string `protobuf:"bytes,9,opt,name=Detail,proto3" json:"Detail,omitempty" dc:"地址详情" dc:"地址详情" dc:"地址详情"` // 地址详情
+	UserId    uint32 `protobuf:"varint,1,opt,name=UserId,proto3" json:"UserId,omitempty"`                                       //
+	IsDefault uint32 `protobuf:"varint,2,opt,name=IsDefault,proto3" json:"IsDefault,omitempty" dc:"默认地址1 非默认0" dc:"默认地址1 非默认0"` // 默认地址1 非默认0
+	Name      string `protobuf:"bytes,3,opt,name=Name,proto3" json:"Name,omitempty"`                                            //
+	Phone     string `protobuf:"bytes,4,opt,name=Phone,proto3" json:"Phone,omitempty"`                                          //
+	Province  string `protobuf:"bytes,5,opt,name=Province,proto3" json:"Province,omitempty"`                                    //
+	City      string `protobuf:"bytes,6,opt,name=City,proto3" json:"City,omitempty"`                                            //
+	Town      string `protobuf:"bytes,7,opt,name=Town,proto3" json:"Town,omitempty" dc:"县区" dc:"县区" dc:"县区" dc:"县区"`            // 县区
+	Street    string `protobuf:"bytes,8,opt,name=Street,proto3" json:"Street,omitempty" dc:"街道乡镇" dc:"街道乡镇" dc:"街道乡镇"`          // 街道乡镇
+	Detail    string `protobuf:"bytes,9,opt,name=Detail,proto3" json:"Detail,omitempty" dc:"地址详情" dc:"地址详情" dc:"地址详情"`          // 地址详情
 }
 
 func (x *ConsigneeInfoCreateReq) Reset() {
@@ -241,15 +241,15 @@ type ConsigneeInfoUpdateReq struct {
 	sizeCache     protoimpl.SizeCache
 	unknownFields protoimpl.UnknownFields
 
-	Id        uint32 `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty" dc:"收货地址表" dc:"收货地址表" dc:"收货地址表"`     // 收货地址表
-	IsDefault uint32 `protobuf:"varint,2,opt,name=IsDefault,proto3" json:"IsDefault,omitempty" dc:"默认地址1 非默认0"`        // 默认地址1 非默认0
-	Name      string `protobuf:"bytes,3,opt,name=Name,proto3" json:"Name,omitempty" dc:"名字" dc:"名字" dc:"名字"`           // 名字
-	Phone     string `protobuf:"bytes,4,opt,name=Phone,proto3" json:"Phone,omitempty" dc:"手机" dc:"手机" dc:"手机"`         // 手机
-	Province  string `protobuf:"bytes,5,opt,name=Province,proto3" json:"Province,omitempty" dc:"省会" dc:"省会" dc:"省会"`   //  省会
-	City      string `protobuf:"bytes,6,opt,name=City,proto3" json:"City,omitempty" dc:"城市" dc:"城市" dc:"城市"`           //  城市
-	Town      string `protobuf:"bytes,7,opt,name=Town,proto3" json:"Town,omitempty" dc:"县区" dc:"县区" dc:"县区"`           // 县区
-	Street    string `protobuf:"bytes,8,opt,name=Street,proto3" json:"Street,omitempty" dc:"街道乡镇" dc:"街道乡镇" dc:"街道乡镇"` // 街道乡镇
-	Detail    string `protobuf:"bytes,9,opt,name=Detail,proto3" json:"Detail,omitempty" dc:"地址详情" dc:"地址详情" dc:"地址详情"` // 地址详情
+	Id        uint32 `protobuf:"varint,1,opt,name=Id,proto3" json:"Id,omitempty" dc:"收货地址表" dc:"收货地址表" dc:"收货地址表" dc:"收货地址表"`   // 收货地址表
+	IsDefault uint32 `protobuf:"varint,2,opt,name=IsDefault,proto3" json:"IsDefault,omitempty" dc:"默认地址1 非默认0" dc:"默认地址1 非默认0"` // 默认地址1 非默认0
+	Name      string `protobuf:"bytes,3,opt,name=Name,proto3" json:"Name,omitempty" dc:"名字" dc:"名字" dc:"名字" dc:"名字"`            // 名字
+	Phone     string `protobuf:"bytes,4,opt,name=Phone,proto3" json:"Phone,omitempty" dc:"手机" dc:"手机" dc:"手机" dc:"手机"`          // 手机
+	Province  string `protobuf:"bytes,5,opt,name=Province,proto3" json:"Province,omitempty" dc:"省会" dc:"省会" dc:"省会" dc:"省会"`    //  省会
+	City      string `protobuf:"bytes,6,opt,name=City,proto3" json:"City,omitempty" dc:"城市" dc:"城市" dc:"城市" dc:"城市"`            //  城市
+	Town      string `protobuf:"bytes,7,opt,name=Town,proto3" json:"Town,omitempty" dc:"县区" dc:"县区" dc:"县区" dc:"县区"`            // 县区
+	Street    string `protobuf:"bytes,8,opt,name=Street,proto3" json:"Street,omitempty" dc:"街道乡镇" dc:"街道乡镇" dc:"街道乡镇"`          // 街道乡镇
+	Detail    string `protobuf:"bytes,9,opt,name=Detail,proto3" json:"Detail,omitempty" dc:"地址详情" dc:"地址详情" dc:"地址详情"`          // 地址详情
 }
 
 func (x *ConsigneeInfoUpdateReq) Reset() {
