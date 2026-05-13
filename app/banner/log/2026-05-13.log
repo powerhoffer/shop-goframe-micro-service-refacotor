@@ -1,0 +1,8 @@
+2026-05-13 17:43:00.494 [DEBU] banner-service service register: &{Head: Deployment: Namespace: Name:banner Version: Endpoints:10.26.49.164:31006 Metadata:map[protocol:grpc]}
+2026-05-13 17:43:00.500 [INFO] banner-service pid[22035]: grpc server started listening on [:31006]
+2026-05-13 17:49:57.652 [INFO] banner-service signal received: interrupt, gracefully shutting down
+2026-05-13 17:49:57.653 [DEBU] banner-service service deregister: &{Service:0xc0002a40e0 Endpoints:10.26.49.164:31006 Metadata:map[protocol:grpc]}
+2026-05-13 17:53:54.159 [DEBU] banner-service service register: &{Head: Deployment: Namespace: Name:banner Version: Endpoints:10.26.49.164:31006 Metadata:map[protocol:grpc]}
+2026-05-13 17:53:54.163 [INFO] banner-service pid[26948]: grpc server started listening on [:31006]
+2026-05-13 17:55:02.788 [INFO] banner-service signal received: interrupt, gracefully shutting down
+2026-05-13 17:55:02.788 [DEBU] banner-service service deregister: &{Service:0xc0001e21c0 Endpoints:10.26.49.164:31006 Metadata:map[protocol:grpc]}
