@@ -1,0 +1,102 @@
+2026-05-13 20:58:08.786 {fb4b406f6321af1845200a0e35c663d8} user-service 200 "GET http 127.0.0.1:8199 /frontend/category?sort=1&page=1&size=10 HTTP/1.1" 355.832, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-13 20:58:53.944 {e788cf2f6d21af1848200a0eb815e8a7} user-service 200 "GET http 127.0.0.1:8199 /frontend/category/all HTTP/1.1" 3272212.972, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 1, "", ""
+Stack:
+1. context canceled
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/goods/api/category_info/v1.(*categoryInfoClient).GetAll
+        /home/lxh/shop-goframe-micro-service-refacotor/app/goods/api/category_info/v1/category_info_grpc.pb.go:48
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/goods.(*ControllerV1).CategoryInfoGetAll
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/goods/goods_v1_category_info_get_all.go:14
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-13 20:59:01.432 {b7a98f4c6f21af1849200a0e5df8acab} user-service 200 "GET http 127.0.0.1:8199 /frontend/category?sort=1&page=1&size=10 HTTP/1.1" 1688424.283, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 1, "", ""
+Stack:
+1. context canceled
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/goods/api/category_info/v1.(*categoryInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/goods/api/category_info/v1/category_info_grpc.pb.go:39
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/goods.(*ControllerV1).CategoryInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/goods/goods_v1_category_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-13 20:59:45.824 {67cc12a27921af184b200a0ece26699c} user-service 200 "GET http 127.0.0.1:8199 /frontend/category?sort=1&page=1&size=10 HTTP/1.1" 1696303.263, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 1, "", ""
+Stack:
+1. context canceled
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/goods/api/category_info/v1.(*categoryInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/goods/api/category_info/v1/category_info_grpc.pb.go:39
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/goods.(*ControllerV1).CategoryInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/goods/goods_v1_category_info_get_list.go:20
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-13 22:21:16.181 {f05c1da7ec25af183ad2240f79c31911} user-service 200 "GET http 127.0.0.1:8199 /frontend/user/info?id= HTTP/1.1" 333.069, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-13 22:21:25.533 {5b988dd4ee25af183bd2240f0a25acac} user-service 200 "GET http 127.0.0.1:8199 /frontend/user/info?id= HTTP/1.1" 449.636, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 51, "Validation Failed", ""
+Stack:
+用户ID不能为空
+2026-05-13 22:23:36.800 {4c25a2640d26af186cee3456e3dc46d8} user-service 200 "PUT http 127.0.0.1:8199 /frontend/user/update/password HTTP/1.1" 906.324, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 51, "Validation Failed", ""
+Stack:
+新密码不能为空
+2026-05-13 22:26:30.977 {2eeaacf13526af186dee3456df264404} user-service 200 "PUT http 127.0.0.1:8199 /frontend/user/update/password HTTP/1.1" 13443.849, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 52, "", ""
+Stack:
+1. UserInfo UpdatePassword 修改密码失败: 密保答案错误
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/user_info/v1.(*userInfoClient).UpdatePassword
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/user_info/v1/user_info_grpc.pb.go:62
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoUpdatePassword
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_user_info_update_password.go:27
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-13 22:29:56.133 {11b0afb66526af1874ee345668d0ad9b} user-service 200 "GET http 127.0.0.1:8199 /frontend/user/info HTTP/1.1" 170.151, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-13 22:30:40.739 {ef7c6e197026af1876ee345632ee007e} user-service 200 "GET http 127.0.0.1:8199 /frontend/consignee?page=&size HTTP/1.1" 181.602, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-13 22:31:01.622 {b38522f67426af1878ee345668d6f9ff} user-service 200 "POST http 127.0.0.1:8199 /frontend/consignee HTTP/1.1" 230.784, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+

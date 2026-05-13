@@ -7,13 +7,15 @@ package order
 import (
 	"shop-goframe-micro-service-refacotor/app/gateway-h5/api/order"
 	order_info "shop-goframe-micro-service-refacotor/app/order/api/order_info/v1"
+	refund_info "shop-goframe-micro-service-refacotor/app/order/api/refund_info/v1"
 	"shop-goframe-micro-service-refacotor/utility/middleware"
 
 	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
 )
 
 type ControllerV1 struct {
-	OrderInfoClient order_info.OrderInfoClient
+	OrderInfoClient  order_info.OrderInfoClient
+	RefundInfoClient refund_info.RefundInfoClient
 }
 
 func NewV1() order.IOrderV1 {
@@ -21,6 +23,7 @@ func NewV1() order.IOrderV1 {
 		middleware.GrpcClientTimeout,
 	))
 	return &ControllerV1{
-		OrderInfoClient: order_info.NewOrderInfoClient(conn),
+		OrderInfoClient:  order_info.NewOrderInfoClient(conn),
+		RefundInfoClient: refund_info.NewRefundInfoClient(conn),
 	}
 }
