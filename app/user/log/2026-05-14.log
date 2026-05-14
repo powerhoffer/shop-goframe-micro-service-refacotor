@@ -1,0 +1,4 @@
+2026-05-14 22:00:11.846 [DEBU] user-service service register: &{Head: Deployment: Namespace: Name:user Version: Endpoints:127.0.0.1:31001 Metadata:map[protocol:grpc]}
+2026-05-14 22:00:11.850 [INFO] user-service pid[11350]: grpc server started listening on [:31001]
+2026-05-14 22:01:18.384 [INFO] user-service signal received: interrupt, gracefully shutting down
+2026-05-14 22:01:18.384 [DEBU] user-service service deregister: &{Service:0xc00013a1c0 Endpoints:127.0.0.1:31001 Metadata:map[protocol:grpc]}
