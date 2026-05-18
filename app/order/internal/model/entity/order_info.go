@@ -17,6 +17,7 @@ type OrderInfo struct {
 	Remark           string      `json:"remark"           orm:"remark"            description:"备注"`                                   // 备注
 	PayAt            *gtime.Time `json:"payAt"            orm:"pay_at"            description:"支付时间"`                                 // 支付时间
 	Status           int         `json:"status"           orm:"status"            description:"订单状态： 1待支付 2已支付待发货 3已发货 4已收货待评价 5已评价"` // 订单状态： 1待支付 2已支付待发货 3已发货 4已收货待评价 5已评价
+	TransactionId    string      `json:"transactionId"    orm:"transaction_id"    description:"第三方支付交易号"`                             // 第三方支付交易号
 	ConsigneeName    string      `json:"consigneeName"    orm:"consignee_name"    description:"收货人姓名"`                                // 收货人姓名
 	ConsigneePhone   string      `json:"consigneePhone"   orm:"consignee_phone"   description:"收货人手机号"`                               // 收货人手机号
 	ConsigneeAddress string      `json:"consigneeAddress" orm:"consignee_address" description:"收货人详细地址"`                              // 收货人详细地址

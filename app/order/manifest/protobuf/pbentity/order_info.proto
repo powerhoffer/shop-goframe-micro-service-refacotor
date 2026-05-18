@@ -18,12 +18,13 @@ message OrderInfo {
     string                    Remark           = 5;  // 备注
     google.protobuf.Timestamp PayAt            = 6;  // 支付时间
     int32                     Status           = 7;  // 订单状态： 1待支付 2已支付待发货 3已发货 4已收货待评价 5已评价
-    string                    ConsigneeName    = 8;  // 收货人姓名
-    string                    ConsigneePhone   = 9;  // 收货人手机号
-    string                    ConsigneeAddress = 10; // 收货人详细地址
-    int32                     Price            = 11; // 订单金额 单位分
-    int32                     CouponPrice      = 12; // 优惠券金额 单位分
-    int32                     ActualPrice      = 13; // 实际支付金额 单位分
-    google.protobuf.Timestamp CreatedAt        = 14; //
-    google.protobuf.Timestamp UpdatedAt        = 15; //
+    string                    TransactionId    = 8;  // 第三方支付交易号
+    string                    ConsigneeName    = 9;  // 收货人姓名
+    string                    ConsigneePhone   = 10; // 收货人手机号
+    string                    ConsigneeAddress = 11; // 收货人详细地址
+    int32                     Price            = 12; // 订单金额 单位分
+    int32                     CouponPrice      = 13; // 优惠券金额 单位分
+    int32                     ActualPrice      = 14; // 实际支付金额 单位分
+    google.protobuf.Timestamp CreatedAt        = 15; //
+    google.protobuf.Timestamp UpdatedAt        = 16; //
 }

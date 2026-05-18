@@ -19,6 +19,7 @@ type OrderInfo struct {
 	Remark           any         // 备注
 	PayAt            *gtime.Time // 支付时间
 	Status           any         // 订单状态： 1待支付 2已支付待发货 3已发货 4已收货待评价 5已评价
+	TransactionId    any         // 第三方支付交易号
 	ConsigneeName    any         // 收货人姓名
 	ConsigneePhone   any         // 收货人手机号
 	ConsigneeAddress any         // 收货人详细地址

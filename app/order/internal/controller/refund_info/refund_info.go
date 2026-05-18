@@ -6,6 +6,7 @@ import (
 	v1 "shop-goframe-micro-service-refacotor/app/order/api/refund_info/v1"
 	"shop-goframe-micro-service-refacotor/app/order/internal/dao"
 	"shop-goframe-micro-service-refacotor/app/order/internal/model/entity"
+	"shop-goframe-micro-service-refacotor/app/order/utility/payment"
 	"shop-goframe-micro-service-refacotor/utility"
 
 	"github.com/gogf/gf/v2/util/gconv"
@@ -101,19 +102,56 @@ func (*Controller) GetDetail(ctx context.Context, req *v1.RefundInfoGetDetailReq
 }
 
 func (*Controller) Create(ctx context.Context, req *v1.RefundInfoCreateReq) (res *v1.RefundInfoCreateRes, err error) {
-	var refund *entity.RefundInfo
+	// 直接使用原有逻辑处理退款创建，以确保功能正常
+	var refund entity.RefundInfo
 	if err := gconv.Struct(req, &refund); err != nil {
 		return nil, err
 	}
 
+	// 使用延迟初始化的DAO方法
+	// 查询订单是否已存在退款记录
+	exist, _ := dao.RefundInfo.Ctx(ctx).
+		Where("order_id", req.OrderId).
+		One()
+	if !exist.IsEmpty() {
+		return nil, gerror.New("该订单已存在退款申请，请勿重复操作")
+	}
+
 	// 售后订单号生成函数
 	refund.Number = utility.GenerateRefundNumber()
-	refund.Status = 1
+	refund.RefundStatus = 0 // 初始状态
+	refund.Status = 1       // 待处理状态
 
 	id, err := dao.RefundInfo.Ctx(ctx).InsertAndGetId(refund)
 	if err != nil {
 		return nil, err
 	}
 
+	// 启动goroutine异步处理退款（模拟服务层功能）
+	go func() {
+		// 异步处理逻辑占位
+	}()
+
 	return &v1.RefundInfoCreateRes{Id: uint32(id)}, nil
+}
+
+func (*Controller) RefundNotify(ctx context.Context, req *v1.RefundNotifyReq) (res *v1.RefundNotifyRes, err error) {
+	// 1) 微信支付回调验证
+	refundId, err := payment.RefundNotify(ctx, req)
+	if err != nil {
+		return nil, err
+	}
+
+	// 2) 直接更新退款状态
+	_, err = dao.RefundInfo.Ctx(ctx).
+		Where("number", refundId).
+		Data(map[string]interface{}{
+			"refund_status": 2, // 退款成功状态
+			"refund_id":     refundId,
+		}).Update()
+	if err != nil {
+		return nil, gerror.WrapCode(gcode.CodeInternalError, err, "更新退款状态失败")
+	}
+
+	return nil, nil
 }

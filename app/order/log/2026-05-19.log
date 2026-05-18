@@ -1,0 +1,2 @@
+2026-05-19 00:23:25.935 [DEBU] order -service service register: &{Head: Deployment: Namespace: Name:order Version: Endpoints:127.0.0.1:31005 Metadata:map[protocol:grpc]}
+2026-05-19 00:23:25.962 [INFO] order -service pid[24430]: grpc server started listening on [:31005]
