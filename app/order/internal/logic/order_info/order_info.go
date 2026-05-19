@@ -50,6 +50,9 @@ func Create(ctx context.Context, req *v1.OrderInfoCreateReq) (int32, string, err
 		return 0, "", fmt.Errorf("订单优惠券价格[%d]小于商品优惠券价格[%d]", req.CouponPrice, totalCouponPrice)
 	}
 	// 库存校验
+	if goods.Client == nil {
+		return 0, "", fmt.Errorf("goods gRPC client 未初始化")
+	}
 	goodsStockMap := make(map[uint32]int32, len(goodsIds))
 	for _, goodsId := range goodsIds {
 		goodsDetail, err := goods.Client.GetDetail(ctx, &goods_info.GoodsInfoGetDetailReq{Id: goodsId})

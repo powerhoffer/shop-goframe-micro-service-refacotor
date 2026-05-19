@@ -4,6 +4,7 @@ import (
 	"context"
 	"shop-goframe-micro-service-refacotor/app/order/internal/controller/order_info"
 	"shop-goframe-micro-service-refacotor/app/order/internal/controller/refund_info"
+	goods "shop-goframe-micro-service-refacotor/app/order/utility/goods_info"
 	"shop-goframe-micro-service-refacotor/app/order/utility/payment"
 
 	"github.com/gogf/gf/contrib/rpc/grpcx/v2"
@@ -22,6 +23,7 @@ var (
 				g.Log().Errorf(ctx, "支付客户端初始化失败:%v", err)
 				return err
 			}
+			goods.Register()
 
 			c := grpcx.Server.NewConfig()
 			c.Options = append(c.Options, []grpc.ServerOption{
