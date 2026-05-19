@@ -9,7 +9,8 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	v1 "shop-goframe-micro-service-refacotor/app/order/api/order_info/v1"
+	orderv1 "shop-goframe-micro-service-refacotor/app/order/api/order_info/v1"
+	refundv1 "shop-goframe-micro-service-refacotor/app/order/api/refund_info/v1"
 	"strconv"
 	"time"
 
@@ -82,7 +83,7 @@ func InitWechatClient() error {
 }
 
 // 微信支付
-func WeChatPayment(ctx context.Context, req *v1.PaymentReq) (*v1.PaymentRes, error) {
+func WeChatPayment(ctx context.Context, req *orderv1.PaymentReq) (*orderv1.PaymentRes, error) {
 	if wechatClient == nil {
 		return nil, gerror.WrapCode(gcode.CodeOperationFailed, errors.New("客户端未初始化"))
 	}
@@ -122,7 +123,7 @@ func WeChatPayment(ctx context.Context, req *v1.PaymentReq) (*v1.PaymentRes, err
 		return nil, gerror.WrapCode(gcode.CodeOperationFailed, err, "sign failed")
 	}
 
-	return &v1.PaymentRes{
+	return &orderv1.PaymentRes{
 		TimeStamp:  timeStamp,
 		NonceStr:   nonceStr,
 		Package:    packageStr,
@@ -132,14 +133,21 @@ func WeChatPayment(ctx context.Context, req *v1.PaymentReq) (*v1.PaymentRes, err
 	}, nil
 }
 
-func Notify(ctx context.Context, req *v1.NotifyReq) (string, string, error) {
+func Notify(ctx context.Context, req *orderv1.NotifyReq) (string, string, error) {
 	// 测试代码(本地测试用)
 	if req.Headers["X-Bypass-Verify"] == "1" {
 		res := new(payments.Transaction)
 		if err := json.Unmarshal([]byte(req.RawBody), res); err != nil {
 			return "", "", gerror.WrapCode(gcode.CodeOperationFailed, err, "测试模式：解析 transaction 失败")
 		}
-		return *res.OutTradeNo, "", nil
+		if res == nil || res.OutTradeNo == nil {
+			return "", "", gerror.WrapCode(gcode.CodeOperationFailed, errors.New("测试模式：out_trade_no 为空"))
+		}
+		transactionId := ""
+		if res.TransactionId != nil {
+			transactionId = *res.TransactionId
+		}
+		return *res.OutTradeNo, transactionId, nil
 	}
 
 	// 1) 获取配置文件
@@ -166,6 +174,9 @@ func Notify(ctx context.Context, req *v1.NotifyReq) (string, string, error) {
 	}
 	if res == nil || res.OutTradeNo == nil {
 		return "", "", gerror.WrapCode(gcode.CodeOperationFailed, errors.New("回调有误"))
+	}
+	if res.TransactionId == nil {
+		return "", "", gerror.WrapCode(gcode.CodeOperationFailed, errors.New("回调缺少 transaction_id"))
 	}
 
 	return *res.OutTradeNo, *res.TransactionId, nil
@@ -262,9 +273,8 @@ type RefundNotification struct {
 
 // RefundNotify 处理微信退款回调
 func RefundNotify(ctx context.Context, req interface{}) (string, error) {
-	// 类型断言
-	notifyReq, ok := req.(*RefundNotifyReq)
-	if !ok {
+	notifyReq, err := normalizeRefundNotifyReq(req)
+	if err != nil {
 		return "", gerror.WrapCode(gcode.CodeInvalidParameter, errors.New("无效的回调请求类型"))
 	}
 
@@ -311,6 +321,20 @@ func RefundNotify(ctx context.Context, req interface{}) (string, error) {
 	refundId := *res.Refund.RefundId
 	g.Log().Info(ctx, "收到微信退款回调", g.Map{"refundId": refundId})
 	return refundId, nil
+}
+
+func normalizeRefundNotifyReq(req interface{}) (*RefundNotifyReq, error) {
+	switch v := req.(type) {
+	case *RefundNotifyReq:
+		return v, nil
+	case *refundv1.RefundNotifyReq:
+		return &RefundNotifyReq{
+			Headers: v.Headers,
+			RawBody: v.RawBody,
+		}, nil
+	default:
+		return nil, errors.New("invalid refund notify request")
+	}
 }
 
 // genNonceStr 生成随机字符串

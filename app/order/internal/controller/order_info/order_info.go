@@ -27,19 +27,19 @@ func Register(s *grpcx.GrpcServer) {
 func (*Controller) Create(ctx context.Context, req *v1.OrderInfoCreateReq) (res *v1.OrderInfoCreateRes, err error) {
 	infoError := consts.InfoError(consts.OrderInfo, consts.CreateFail)
 	// 调用login层创建订单
-	orderId, err := order_info.Create(ctx, req)
+	orderId, orderNumber, err := order_info.Create(ctx, req)
 	if err != nil {
 		g.Log().Errorf(ctx, "%v %v", infoError, err)
 		return nil, gerror.WrapCode(gcode.CodeDbOperationError, err, infoError)
 	}
-	return &v1.OrderInfoCreateRes{Id: uint32(orderId)}, nil
+	return &v1.OrderInfoCreateRes{Id: uint32(orderId), Number: orderNumber}, nil
 }
 
 func (*Controller) GetDetail(ctx context.Context, req *v1.OrderInfoGetDetailReq) (res *v1.OrderInfoGetDetailRes, err error) {
 	infoError := consts.InfoError(consts.OrderInfo, consts.GetDetailFile)
 
 	// 调用Service层获取订单详情
-	pbOrder, pbGoodsList, err := order_info.GetDetail(ctx, req.Id)
+	pbOrder, pbGoodsList, err := order_info.GetDetail(ctx, req.Id, req.UserId)
 	if err != nil {
 		g.Log().Errorf(ctx, "%v %v", infoError, err)
 		return nil, gerror.WrapCode(gcode.CodeDbOperationError, err, infoError)
@@ -99,7 +99,7 @@ func (*Controller) Notify(ctx context.Context, req *v1.NotifyReq) (res *v1.Notif
 	}
 
 	// 2) 修改订单状态
-	if err = order_info.UpdateOrderStatusByNumber(ctx, orderNumber, transactionId, int(orderStatus.OrderStatusPaid)); err != nil {
+	if err = order_info.UpdateOrderStatusByNumber(ctx, orderNumber, transactionId, int(consts.OrderStatusPaid)); err != nil {
 		return nil, err
 	}
 

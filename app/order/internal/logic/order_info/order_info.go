@@ -12,9 +12,9 @@ import (
 	"shop-goframe-micro-service-refacotor/app/order/internal/model/entity"
 	goods "shop-goframe-micro-service-refacotor/app/order/utility/goods_info"
 	"shop-goframe-micro-service-refacotor/app/order/utility/rabbitmq"
+	grabbitmq "shop-goframe-micro-service-refacotor/app/order/utility/rabbitmq"
 	"shop-goframe-micro-service-refacotor/utility"
 	"shop-goframe-micro-service-refacotor/utility/metrics"
-	grabbitmq "shop-goframe-micro-service-refacotor/utility/rabbitmq"
 
 	"github.com/gogf/gf/v2/errors/gcode"
 	"github.com/gogf/gf/v2/errors/gerror"
@@ -50,13 +50,20 @@ func Create(ctx context.Context, req *v1.OrderInfoCreateReq) (int32, string, err
 		return 0, "", fmt.Errorf("订单优惠券价格[%d]小于商品优惠券价格[%d]", req.CouponPrice, totalCouponPrice)
 	}
 	// 库存校验
-	goodsStockMap, err := goods.Client.GetGoodsStock(ctx, &goods_info.GetGoodsStockReq{GoodsIds: goodsIds})
-	if err != nil {
-		return 0, "", fmt.Errorf("调用 goods 模块失败,err:%v", err)
+	goodsStockMap := make(map[uint32]int32, len(goodsIds))
+	for _, goodsId := range goodsIds {
+		goodsDetail, err := goods.Client.GetDetail(ctx, &goods_info.GoodsInfoGetDetailReq{Id: goodsId})
+		if err != nil {
+			return 0, "", fmt.Errorf("调用 goods 模块失败,err:%v", err)
+		}
+		if goodsDetail == nil || goodsDetail.Data == nil {
+			return 0, "", fmt.Errorf("商品{%d}不存在", goodsId)
+		}
+		goodsStockMap[goodsId] = goodsDetail.Data.Stock
 	}
 	fmt.Println("goodsStockMap", goodsStockMap)
 	for _, item := range req.OrderGoodsInfo {
-		if item.Count > uint32(goodsStockMap.GoodsStock[item.GoodsId]) {
+		if item.Count > uint32(goodsStockMap[item.GoodsId]) {
 			return 0, "", fmt.Errorf("商品{%d}库存不足", item.GoodsId)
 		}
 	}
@@ -205,7 +212,7 @@ func Create(ctx context.Context, req *v1.OrderInfoCreateReq) (int32, string, err
 
 	// 对于每个商品，更新库存指标
 	for _, goodsInfo := range goodsInfos {
-		metrics.UpdateInventory(ctx, fmt.Sprintf("%d", goodsInfo.GoodsId), int64(goodsStockMap.GoodsStock[uint32(goodsInfo.GoodsId)]-int32(goodsInfo.Count)))
+		metrics.UpdateInventory(ctx, fmt.Sprintf("%d", goodsInfo.GoodsId), int64(goodsStockMap[uint32(goodsInfo.GoodsId)]-int32(goodsInfo.Count)))
 	}
 
 	return orderId, order.Number, nil
@@ -466,7 +473,7 @@ func HandleOrderTimeoutResult(ctx context.Context, orderId int) error {
 		return nil
 	}
 
-	g.Log().Infof(ctx, "订单状态更新成功, 订单编号:{%s}, 新状态: %d", orderId, consts.OrderStatusPendingPayment)
+	g.Log().Infof(ctx, "订单状态更新成功, 订单编号:{%d}, 新状态: %d", orderId, consts.OrderStatusPendingPayment)
 	return nil
 }
 

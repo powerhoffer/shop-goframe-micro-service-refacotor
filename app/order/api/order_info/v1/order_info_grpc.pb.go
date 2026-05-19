@@ -22,6 +22,10 @@ type OrderInfoClient interface {
 	Create(ctx context.Context, in *OrderInfoCreateReq, opts ...grpc.CallOption) (*OrderInfoCreateRes, error)
 	GetDetail(ctx context.Context, in *OrderInfoGetDetailReq, opts ...grpc.CallOption) (*OrderInfoGetDetailRes, error)
 	GetList(ctx context.Context, in *OrderInfoGetListReq, opts ...grpc.CallOption) (*OrderInfoGetListRes, error)
+	GetCount(ctx context.Context, in *OrderInfoGetCountReq, opts ...grpc.CallOption) (*OrderInfoGetCountRes, error)
+	Payment(ctx context.Context, in *PaymentReq, opts ...grpc.CallOption) (*PaymentRes, error)
+	Notify(ctx context.Context, in *NotifyReq, opts ...grpc.CallOption) (*NotifyRes, error)
+	CancelOrder(ctx context.Context, in *CancelOrderReq, opts ...grpc.CallOption) (*CancelOrderRes, error)
 }
 
 type orderInfoClient struct {
@@ -59,6 +63,42 @@ func (c *orderInfoClient) GetList(ctx context.Context, in *OrderInfoGetListReq, 
 	return out, nil
 }
 
+func (c *orderInfoClient) GetCount(ctx context.Context, in *OrderInfoGetCountReq, opts ...grpc.CallOption) (*OrderInfoGetCountRes, error) {
+	out := new(OrderInfoGetCountRes)
+	err := c.cc.Invoke(ctx, "/order_info.v1.order_info/GetCount", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *orderInfoClient) Payment(ctx context.Context, in *PaymentReq, opts ...grpc.CallOption) (*PaymentRes, error) {
+	out := new(PaymentRes)
+	err := c.cc.Invoke(ctx, "/order_info.v1.order_info/Payment", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *orderInfoClient) Notify(ctx context.Context, in *NotifyReq, opts ...grpc.CallOption) (*NotifyRes, error) {
+	out := new(NotifyRes)
+	err := c.cc.Invoke(ctx, "/order_info.v1.order_info/Notify", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
+func (c *orderInfoClient) CancelOrder(ctx context.Context, in *CancelOrderReq, opts ...grpc.CallOption) (*CancelOrderRes, error) {
+	out := new(CancelOrderRes)
+	err := c.cc.Invoke(ctx, "/order_info.v1.order_info/CancelOrder", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // OrderInfoServer is the server API for OrderInfo service.
 // All implementations must embed UnimplementedOrderInfoServer
 // for forward compatibility
@@ -66,6 +106,10 @@ type OrderInfoServer interface {
 	Create(context.Context, *OrderInfoCreateReq) (*OrderInfoCreateRes, error)
 	GetDetail(context.Context, *OrderInfoGetDetailReq) (*OrderInfoGetDetailRes, error)
 	GetList(context.Context, *OrderInfoGetListReq) (*OrderInfoGetListRes, error)
+	GetCount(context.Context, *OrderInfoGetCountReq) (*OrderInfoGetCountRes, error)
+	Payment(context.Context, *PaymentReq) (*PaymentRes, error)
+	Notify(context.Context, *NotifyReq) (*NotifyRes, error)
+	CancelOrder(context.Context, *CancelOrderReq) (*CancelOrderRes, error)
 	mustEmbedUnimplementedOrderInfoServer()
 }
 
@@ -81,6 +125,18 @@ func (UnimplementedOrderInfoServer) GetDetail(context.Context, *OrderInfoGetDeta
 }
 func (UnimplementedOrderInfoServer) GetList(context.Context, *OrderInfoGetListReq) (*OrderInfoGetListRes, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method GetList not implemented")
+}
+func (UnimplementedOrderInfoServer) GetCount(context.Context, *OrderInfoGetCountReq) (*OrderInfoGetCountRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method GetCount not implemented")
+}
+func (UnimplementedOrderInfoServer) Payment(context.Context, *PaymentReq) (*PaymentRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Payment not implemented")
+}
+func (UnimplementedOrderInfoServer) Notify(context.Context, *NotifyReq) (*NotifyRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method Notify not implemented")
+}
+func (UnimplementedOrderInfoServer) CancelOrder(context.Context, *CancelOrderReq) (*CancelOrderRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method CancelOrder not implemented")
 }
 func (UnimplementedOrderInfoServer) mustEmbedUnimplementedOrderInfoServer() {}
 
@@ -149,6 +205,78 @@ func _OrderInfo_GetList_Handler(srv interface{}, ctx context.Context, dec func(i
 	return interceptor(ctx, in, info, handler)
 }
 
+func _OrderInfo_GetCount_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(OrderInfoGetCountReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(OrderInfoServer).GetCount(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/order_info.v1.order_info/GetCount",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(OrderInfoServer).GetCount(ctx, req.(*OrderInfoGetCountReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _OrderInfo_Payment_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(PaymentReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(OrderInfoServer).Payment(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/order_info.v1.order_info/Payment",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(OrderInfoServer).Payment(ctx, req.(*PaymentReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _OrderInfo_Notify_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(NotifyReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(OrderInfoServer).Notify(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/order_info.v1.order_info/Notify",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(OrderInfoServer).Notify(ctx, req.(*NotifyReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
+func _OrderInfo_CancelOrder_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(CancelOrderReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(OrderInfoServer).CancelOrder(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/order_info.v1.order_info/CancelOrder",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(OrderInfoServer).CancelOrder(ctx, req.(*CancelOrderReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // OrderInfo_ServiceDesc is the grpc.ServiceDesc for OrderInfo service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -167,6 +295,22 @@ var OrderInfo_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "GetList",
 			Handler:    _OrderInfo_GetList_Handler,
+		},
+		{
+			MethodName: "GetCount",
+			Handler:    _OrderInfo_GetCount_Handler,
+		},
+		{
+			MethodName: "Payment",
+			Handler:    _OrderInfo_Payment_Handler,
+		},
+		{
+			MethodName: "Notify",
+			Handler:    _OrderInfo_Notify_Handler,
+		},
+		{
+			MethodName: "CancelOrder",
+			Handler:    _OrderInfo_CancelOrder_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

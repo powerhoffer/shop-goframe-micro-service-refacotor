@@ -22,6 +22,7 @@ type RefundInfoClient interface {
 	GetList(ctx context.Context, in *RefundInfoGetListReq, opts ...grpc.CallOption) (*RefundInfoGetListRes, error)
 	GetDetail(ctx context.Context, in *RefundInfoGetDetailReq, opts ...grpc.CallOption) (*RefundInfoGetDetailRes, error)
 	Create(ctx context.Context, in *RefundInfoCreateReq, opts ...grpc.CallOption) (*RefundInfoCreateRes, error)
+	RefundNotify(ctx context.Context, in *RefundNotifyReq, opts ...grpc.CallOption) (*RefundNotifyRes, error)
 }
 
 type refundInfoClient struct {
@@ -59,6 +60,15 @@ func (c *refundInfoClient) Create(ctx context.Context, in *RefundInfoCreateReq, 
 	return out, nil
 }
 
+func (c *refundInfoClient) RefundNotify(ctx context.Context, in *RefundNotifyReq, opts ...grpc.CallOption) (*RefundNotifyRes, error) {
+	out := new(RefundNotifyRes)
+	err := c.cc.Invoke(ctx, "/refund_info.v1.refund_info/RefundNotify", in, out, opts...)
+	if err != nil {
+		return nil, err
+	}
+	return out, nil
+}
+
 // RefundInfoServer is the server API for RefundInfo service.
 // All implementations must embed UnimplementedRefundInfoServer
 // for forward compatibility
@@ -66,6 +76,7 @@ type RefundInfoServer interface {
 	GetList(context.Context, *RefundInfoGetListReq) (*RefundInfoGetListRes, error)
 	GetDetail(context.Context, *RefundInfoGetDetailReq) (*RefundInfoGetDetailRes, error)
 	Create(context.Context, *RefundInfoCreateReq) (*RefundInfoCreateRes, error)
+	RefundNotify(context.Context, *RefundNotifyReq) (*RefundNotifyRes, error)
 	mustEmbedUnimplementedRefundInfoServer()
 }
 
@@ -81,6 +92,9 @@ func (UnimplementedRefundInfoServer) GetDetail(context.Context, *RefundInfoGetDe
 }
 func (UnimplementedRefundInfoServer) Create(context.Context, *RefundInfoCreateReq) (*RefundInfoCreateRes, error) {
 	return nil, status.Errorf(codes.Unimplemented, "method Create not implemented")
+}
+func (UnimplementedRefundInfoServer) RefundNotify(context.Context, *RefundNotifyReq) (*RefundNotifyRes, error) {
+	return nil, status.Errorf(codes.Unimplemented, "method RefundNotify not implemented")
 }
 func (UnimplementedRefundInfoServer) mustEmbedUnimplementedRefundInfoServer() {}
 
@@ -149,6 +163,24 @@ func _RefundInfo_Create_Handler(srv interface{}, ctx context.Context, dec func(i
 	return interceptor(ctx, in, info, handler)
 }
 
+func _RefundInfo_RefundNotify_Handler(srv interface{}, ctx context.Context, dec func(interface{}) error, interceptor grpc.UnaryServerInterceptor) (interface{}, error) {
+	in := new(RefundNotifyReq)
+	if err := dec(in); err != nil {
+		return nil, err
+	}
+	if interceptor == nil {
+		return srv.(RefundInfoServer).RefundNotify(ctx, in)
+	}
+	info := &grpc.UnaryServerInfo{
+		Server:     srv,
+		FullMethod: "/refund_info.v1.refund_info/RefundNotify",
+	}
+	handler := func(ctx context.Context, req interface{}) (interface{}, error) {
+		return srv.(RefundInfoServer).RefundNotify(ctx, req.(*RefundNotifyReq))
+	}
+	return interceptor(ctx, in, info, handler)
+}
+
 // RefundInfo_ServiceDesc is the grpc.ServiceDesc for RefundInfo service.
 // It's only intended for direct use with grpc.RegisterService,
 // and not to be introspected or modified (even as a copy)
@@ -167,6 +199,10 @@ var RefundInfo_ServiceDesc = grpc.ServiceDesc{
 		{
 			MethodName: "Create",
 			Handler:    _RefundInfo_Create_Handler,
+		},
+		{
+			MethodName: "RefundNotify",
+			Handler:    _RefundInfo_RefundNotify_Handler,
 		},
 	},
 	Streams:  []grpc.StreamDesc{},

@@ -10,6 +10,7 @@ service refund_info {
   rpc GetList(RefundInfoGetListReq) returns (RefundInfoGetListRes) {}
   rpc GetDetail(RefundInfoGetDetailReq) returns (RefundInfoGetDetailRes) {}
   rpc Create(RefundInfoCreateReq) returns (RefundInfoCreateRes) {}
+  rpc RefundNotify(RefundNotifyReq) returns (RefundNotifyRes) {}
 }
 
 // 新增消息定义

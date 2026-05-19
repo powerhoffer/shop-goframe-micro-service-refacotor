@@ -4,6 +4,7 @@ import (
 	"context"
 	"shop-goframe-micro-service-refacotor/app/order/api/pbentity"
 	v1 "shop-goframe-micro-service-refacotor/app/order/api/refund_info/v1"
+	"shop-goframe-micro-service-refacotor/app/order/internal/consts"
 	"shop-goframe-micro-service-refacotor/app/order/internal/dao"
 	"shop-goframe-micro-service-refacotor/app/order/internal/model/entity"
 	"shop-goframe-micro-service-refacotor/app/order/utility/payment"
@@ -144,9 +145,10 @@ func (*Controller) RefundNotify(ctx context.Context, req *v1.RefundNotifyReq) (r
 
 	// 2) 直接更新退款状态
 	_, err = dao.RefundInfo.Ctx(ctx).
-		Where("number", refundId).
+		Where("refund_id", refundId).
+		WhereOr("number", refundId).
 		Data(map[string]interface{}{
-			"refund_status": 2, // 退款成功状态
+			"refund_status": int(consts.RefundOrderStatusSuccess),
 			"refund_id":     refundId,
 		}).Update()
 	if err != nil {
