@@ -1,0 +1,11 @@
+gfcli:
+  gen:
+    dao:
+      - link: "mysql:root:123456@tcp(127.0.0.1:3306)/flash_sale"
+        descriptionTag: true
+    pbentity:
+      - link: "mysql:root:123456@tcp(127.0.0.1:3306)/flash_sale"
+  docker:
+    build: "-a amd64 -s linux -p temp -ew"
+    tagPrefixes:
+      - my.image.pub/my-app

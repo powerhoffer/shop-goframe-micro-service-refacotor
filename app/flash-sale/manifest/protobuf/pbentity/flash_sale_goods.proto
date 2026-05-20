@@ -1,0 +1,29 @@
+// ==========================================================================
+// Code generated and maintained by GoFrame CLI tool. DO NOT EDIT.
+// ==========================================================================
+
+syntax = "proto3";
+
+package pbentity;
+
+option go_package = "shop-goframe-micro-service-refacotor/app/flash-sale/api/pbentity";
+
+import "google/protobuf/timestamp.proto";
+
+message FlashSaleGoods {
+    uint64                    Id             = 1;  // 秒杀商品ID
+    uint64                    GoodsId        = 2;  // 商品ID
+    uint64                    ActivityId     = 3;  // 活动ID
+    string                    Title          = 4;  // 秒杀标题
+    string                    Description    = 5;  // 秒杀描述
+    uint64                    OriginalPrice  = 6;  // 原价，单位分
+    uint64                    SalePrice      = 7;  // 秒杀价，单位分
+    uint32                    TotalStock     = 8;  // 总库存
+    uint32                    AvailableStock = 9;  // 可用库存
+    google.protobuf.Timestamp StartTime      = 10; // 开始时间
+    google.protobuf.Timestamp EndTime        = 11; // 结束时间
+    uint32                    Status         = 12; // 状态 1启用 2禁用 3结束
+    string                    ImageUrl       = 13; // 商品图片URL
+    google.protobuf.Timestamp CreatedAt      = 14; // 创建时间
+    google.protobuf.Timestamp UpdatedAt      = 15; // 更新时间
+}

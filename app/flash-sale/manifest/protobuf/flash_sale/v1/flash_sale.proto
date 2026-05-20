@@ -1,0 +1,71 @@
+syntax = "proto3";
+
+package flash_sale.v1;
+
+option go_package = "shop-goframe-micro-service-refacotor/app/flash-sale/api/flash_sale/v1";
+
+import "pbentity/flash_sale_goods.proto";
+
+service FlashSaleService {
+  rpc GetFlashSaleGoodsList(FlashSaleGoodsListReq) returns (FlashSaleGoodsListRes) {}
+  rpc GetFlashSaleGoodsDetail(FlashSaleGoodsDetailReq) returns (FlashSaleGoodsDetailRes) {}
+  rpc CreateFlashSaleOrder(CreateFlashSaleOrderReq) returns (CreateFlashSaleOrderRes) {}
+  rpc GetFlashSaleResult(GetFlashSaleResultReq) returns (GetFlashSaleResultRes) {}
+}
+
+message FlashSaleGoodsListReq {
+  uint32 activity_id = 1;
+  uint32 page_num = 2;
+  uint32 page_size = 3;
+}
+
+message FlashSaleGoodsListRes {
+  uint32 total = 1;
+  repeated FlashSaleGoodsInfo list = 2;
+}
+
+message FlashSaleGoodsDetailReq {
+  uint32 goods_id = 1;
+  uint32 activity_id = 2;
+}
+
+message FlashSaleGoodsDetailRes {
+  FlashSaleGoodsInfo goods_info = 1;
+  int64 remain_seconds = 2;
+  bool can_buy = 3;
+}
+
+message CreateFlashSaleOrderReq {
+  uint32 goods_id = 1;
+  uint32 activity_id = 2;
+  uint32 user_id = 3;
+  uint32 count = 4;
+}
+
+message CreateFlashSaleOrderRes {
+  bool success = 1;
+  string order_no = 2;
+  string message = 3;
+  string result_id = 4;
+  uint32 status = 5;
+}
+
+message GetFlashSaleResultReq {
+  string result_id = 1;
+  uint32 user_id = 2;
+}
+
+message GetFlashSaleResultRes {
+  uint32 status = 1;
+  string message = 2;
+  string order_no = 3;
+  uint32 goods_id = 4;
+  uint64 pay_amount = 5;
+}
+
+message FlashSaleGoodsInfo {
+  pbentity.FlashSaleGoods goods = 1;
+  uint32 available_stock = 2;
+  int64 remain_seconds = 3;
+  bool can_buy = 4;
+}
