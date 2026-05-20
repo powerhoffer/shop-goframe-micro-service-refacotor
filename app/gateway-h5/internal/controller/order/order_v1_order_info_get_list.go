@@ -10,30 +10,31 @@ import (
 )
 
 func (c *ControllerV1) OrderInfoGetList(ctx context.Context, req *v1.OrderInfoGetListReq) (res *v1.OrderInfoGetListRes, err error) {
-	// 使用 gconv 自动转换结构体
 	grpcReq := &order_info.OrderInfoGetListReq{}
 	if err := gconv.Struct(req, grpcReq); err != nil {
 		return nil, err
 	}
-
-	// 调用gRPC服务
-	grpcRes, err := c.OrderInfoClient.GetList(ctx, grpcReq)
-
+	userID, err := userIDFromCtx(ctx)
 	if err != nil {
 		return nil, err
 	}
+	grpcReq.UserId = userID
 
-	// 转换响应
+	grpcRes, err := c.OrderInfoClient.GetList(ctx, grpcReq)
+	if err != nil {
+		return nil, err
+	}
+	if grpcRes == nil || grpcRes.Data == nil {
+		return &v1.OrderInfoGetListRes{List: make([]*v1.OrderInfoItem, 0), Page: req.Page, Size: req.Size}, nil
+	}
+
 	res = &v1.OrderInfoGetListRes{
 		Page:  grpcRes.Data.Page,
 		Size:  grpcRes.Data.Size,
 		Total: grpcRes.Data.Total,
 	}
-
-	// 批量转换列表项
 	if err := gconv.Structs(grpcRes.Data.List, &res.List); err != nil {
 		return nil, err
 	}
-
 	return res, nil
 }

@@ -59,7 +59,8 @@ type OrderInfoCreateReq struct {
 }
 
 type OrderInfoCreateRes struct {
-	Id uint32 `json:"id" dc:"订单ID"`
+	Id     uint32 `json:"id" dc:"订单ID"`
+	Number string `json:"number" dc:"订单编号"`
 }
 
 type OrderGoodsItem struct {
@@ -70,4 +71,77 @@ type OrderGoodsItem struct {
 	Price          uint32 `json:"price" v:"required|min:0" dc:"商品金额"`
 	CouponPrice    uint32 `json:"coupon_price" d:"0" dc:"商品优惠券金额"`
 	ActualPrice    uint32 `json:"actual_price" v:"required|min:0" dc:"商品实际支付金额"`
+}
+
+// 发起微信支付
+type PaymentReq struct {
+	g.Meta `path:"/payment" method:"post" tags:"订单管理" sm:"发起支付"`
+	OpenId string `json:"openId" v:"required" dc:"微信 openid"`
+	Amount int64  `json:"amount" v:"required|min:1" dc:"金额，单位分"`
+	Number string `json:"number" v:"required" dc:"订单编号"`
+}
+
+type PaymentRes struct {
+	TimeStamp  string `json:"timeStamp" dc:"时间戳"`
+	NonceStr   string `json:"nonceStr" dc:"随机字符串"`
+	Package    string `json:"package" dc:"预支付交易会话标识"`
+	SignType   string `json:"signType" dc:"签名类型"`
+	PaySign    string `json:"paySign" dc:"支付签名"`
+	OutTradeNo string `json:"out_trade_no" dc:"商户订单号"`
+}
+
+// 微信支付回调
+type NotifyReq struct {
+	g.Meta  `path:"/notify" method:"post" tags:"订单管理" sm:"微信支付回调"`
+	RawBody string            `json:"-" dc:"回调原始 body"`
+	Headers map[string]string `json:"-" dc:"微信回调请求头"`
+}
+
+type NotifyRes struct{}
+
+// 订单详情查询
+type OrderInfoGetDetailReq struct {
+	g.Meta `path:"/order/{id}" method:"get" tags:"订单管理" sm:"订单详情"`
+	Id     uint32 `json:"id" v:"required" dc:"订单ID"`
+}
+
+type OrderInfoGetDetailRes struct {
+	OrderInfo       *OrderInfoItem      `json:"order_info" dc:"订单信息"`
+	OrderGoodsInfos []*OrderGoodsDetail `json:"order_goods_infos" dc:"订单商品信息"`
+}
+
+type OrderGoodsDetail struct {
+	Id             uint32 `json:"id" dc:"订单商品ID"`
+	GoodsId        uint32 `json:"goods_id" dc:"商品ID"`
+	GoodsOptionsId uint32 `json:"goods_options_id" dc:"商品规格ID"`
+	Count          uint32 `json:"count" dc:"商品数量"`
+	Remark         string `json:"remark" dc:"备注"`
+	Price          uint32 `json:"price" dc:"商品金额"`
+	CouponPrice    uint32 `json:"coupon_price" dc:"商品优惠券金额"`
+	ActualPrice    uint32 `json:"actual_price" dc:"商品实际支付金额"`
+}
+
+// 订单数量统计
+type OrderInfoGetCountReq struct {
+	g.Meta `path:"/order/count" method:"get" tags:"订单管理" sm:"订单数量统计"`
+}
+
+type OrderInfoGetCountRes struct {
+	Pending   uint32 `json:"pending" dc:"待支付"`
+	Shipping  uint32 `json:"shipping" dc:"待发货"`
+	Delivered uint32 `json:"delivered" dc:"待收货"`
+	Completed uint32 `json:"completed" dc:"已完成"`
+	AfterSale uint32 `json:"afterSale" dc:"售后中"`
+}
+
+// 取消订单
+type CancelOrderReq struct {
+	g.Meta `path:"/order/cancel" method:"post" tags:"订单管理" sm:"取消订单"`
+	Id     uint32 `json:"id" v:"required" dc:"订单ID"`
+}
+
+type CancelOrderRes struct {
+	Code    uint32 `json:"code"`
+	Message string `json:"message"`
+	Data    string `json:"data"`
 }

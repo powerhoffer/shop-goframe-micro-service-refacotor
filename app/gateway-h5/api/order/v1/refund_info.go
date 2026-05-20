@@ -20,15 +20,18 @@ type RefundInfoGetListRes struct {
 }
 
 type RefundInfoItem struct {
-	Id        uint32                 `json:"id" dc:"退款ID"`
-	Number    string                 `json:"number" dc:"退款单号"`
-	OrderId   uint32                 `json:"order_id" dc:"订单ID"`
-	GoodsId   uint32                 `json:"goods_id" dc:"商品ID"`
-	Reason    string                 `json:"reason" dc:"退款原因"`
-	Status    uint32                 `json:"status" dc:"状态 1待处理 2同意退款 3拒绝退款"`
-	UserId    uint32                 `json:"user_id" dc:"用户ID"`
-	CreatedAt *timestamppb.Timestamp `json:"created_at" dc:"创建时间"`
-	UpdatedAt *timestamppb.Timestamp `json:"updated_at" dc:"更新时间"`
+	Id           uint32                 `json:"id" dc:"退款ID"`
+	Number       string                 `json:"number" dc:"退款单号"`
+	OrderId      uint32                 `json:"order_id" dc:"订单ID"`
+	GoodsId      uint32                 `json:"goods_id" dc:"商品ID"`
+	RefundId     string                 `json:"refund_id" dc:"微信退款单号"`
+	Reason       string                 `json:"reason" dc:"退款原因"`
+	Status       uint32                 `json:"status" dc:"状态 1待处理 2同意退款 3拒绝退款"`
+	RefundStatus uint32                 `json:"refund_status" dc:"退款状态 0未退款 1退款中 2退款成功 3退款失败"`
+	RefundAmount int64                  `json:"refund_amount" dc:"退款金额，单位分"`
+	UserId       uint32                 `json:"user_id" dc:"用户ID"`
+	CreatedAt    *timestamppb.Timestamp `json:"created_at" dc:"创建时间"`
+	UpdatedAt    *timestamppb.Timestamp `json:"updated_at" dc:"更新时间"`
 }
 
 // 退款详情查询
@@ -53,3 +56,12 @@ type RefundInfoCreateReq struct {
 type RefundInfoCreateRes struct {
 	Id uint32 `json:"id" dc:"退款ID"`
 }
+
+// 微信退款回调
+type RefundNotifyReq struct {
+	g.Meta  `path:"/refundNotify" method:"post" tags:"退款管理" sm:"微信退款回调"`
+	RawBody string            `json:"-" dc:"回调原始 body"`
+	Headers map[string]string `json:"-" dc:"微信回调请求头"`
+}
+
+type RefundNotifyRes struct{}

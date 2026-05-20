@@ -3,3 +3,20 @@
 // =================================================================================
 
 package order
+
+import (
+	"context"
+
+	"shop-goframe-micro-service-refacotor/utility/middleware"
+
+	"github.com/gogf/gf/v2/errors/gcode"
+	"github.com/gogf/gf/v2/errors/gerror"
+)
+
+func userIDFromCtx(ctx context.Context) (uint32, error) {
+	userID, ok := ctx.Value(middleware.CtxUserId).(uint32)
+	if !ok || userID == 0 {
+		return 0, gerror.NewCode(gcode.CodeNotAuthorized, "无法获取用户信息，请重新登录")
+	}
+	return userID, nil
+}

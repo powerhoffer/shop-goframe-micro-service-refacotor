@@ -1,0 +1,31 @@
+2026-05-14 21:59:54.920 {6f57747f5673af18ed15e71d0ed4e602} user-service 200 "POST http 127.0.0.1:8199 /frontend/user/login HTTP/1.1" 1743546.829, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 50, "Internal Error", ""
+Stack:
+1. 登录失败
+   1).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoLogin
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_user_info_login.go:28
+2. context canceled
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/user/api/user_info/v1.(*userInfoClient).Login
+        /home/lxh/shop-goframe-micro-service-refacotor/app/user/api/user_info/v1/user_info_grpc.pb.go:44
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user.(*ControllerV1).UserInfoLogin
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/user/user_v1_user_info_login.go:23
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-14 22:00:58.137 {9dee629f6573af18f015e71d3168689c} user-service 200 "GET http 127.0.0.1:8199 /frontend/cart?page=1&size=10 HTTP/1.1" 155.536, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-14 23:03:11.441 {b44da0d9ca76af18ebe7333d100d3af0} user-service 200 "GET http 127.0.0.1:8199 /frontend/user_coupon?page=1&size=10 HTTP/1.1" 392.226, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+

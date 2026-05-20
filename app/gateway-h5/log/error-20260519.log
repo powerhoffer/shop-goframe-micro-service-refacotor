@@ -1,0 +1,202 @@
+2026-05-19 22:04:46.624 {dd8fd0a881fcb018a6279d59ee2c2f9e} user-service 200 "POST http 127.0.0.1:8199 /frontend/order HTTP/1.1" 196.032, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:04:56.312 {c77bd6e983fcb018a7279d591d8705fe} user-service 200 "POST http 127.0.0.1:8199 /frontend/order HTTP/1.1" 6678.608, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 52, "", ""
+Stack:
+1. OrderInfo Create 插入失败: 订单实际支付价格[12]不等于订单总价[10]减去优惠券价格[2]
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/order/api/order_info/v1.(*orderInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/order/api/order_info/v1/order_info_grpc.pb.go:41
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order.(*ControllerV1).OrderInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order/order_v1_order_info_create.go:36
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:05:14.630 {b4c5fb2d88fcb018a8279d59e1b16472} user-service 200 "POST http 127.0.0.1:8199 /frontend/order HTTP/1.1" 1814.553, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 52, "", ""
+Stack:
+1. OrderInfo Create 插入失败: 订单总价[12]与商品总价[10]不符
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/order/api/order_info/v1.(*orderInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/order/api/order_info/v1/order_info_grpc.pb.go:41
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order.(*ControllerV1).OrderInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order/order_v1_order_info_create.go:36
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:05:20.501 {1423f28b89fcb018a9279d598caa2a6b} user-service 200 "POST http 127.0.0.1:8199 /frontend/order HTTP/1.1" 1582.412, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 52, "", ""
+Stack:
+1. OrderInfo Create 插入失败: 订单实际支付价格[12]不等于订单总价[12]减去优惠券价格[2]
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/order/api/order_info/v1.(*orderInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/order/api/order_info/v1/order_info_grpc.pb.go:41
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order.(*ControllerV1).OrderInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order/order_v1_order_info_create.go:36
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:05:35.059 {40b842208cfcb018aa279d59e6722098} user-service 200 "POST http 127.0.0.1:8199 /frontend/order HTTP/1.1" 3480852.487, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 1, "", ""
+Stack:
+1. context canceled
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/order/api/order_info/v1.(*orderInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/order/api/order_info/v1/order_info_grpc.pb.go:41
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order.(*ControllerV1).OrderInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order/order_v1_order_info_create.go:36
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:05:43.147 {7df1fe7f8efcb018ab279d590e8d7fc9} user-service 200 "POST http 127.0.0.1:8199 /frontend/order HTTP/1.1" 1373003.619, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 1, "", ""
+Stack:
+1. context canceled
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/order/api/order_info/v1.(*orderInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/order/api/order_info/v1/order_info_grpc.pb.go:41
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order.(*ControllerV1).OrderInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order/order_v1_order_info_create.go:36
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:06:20.246 {14131d7597fcb018ac279d59f8022aa1} user-service 200 "GET http 127.0.0.1:8199 /frontend/order?page=1&size&number&user_id&pay_type&status&consignee_phone&price_gte&price_lte&seconds=&seconds=&seconds=&seconds=&nanos=&nanos=&nanos=&nanos= HTTP/1.1" 313.746, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:06:40.572 {f32a86aa9bfcb018ae279d5975e947e5} user-service 200 "POST http 127.0.0.1:8199 /frontend/order HTTP/1.1" 2250167.620, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 1, "", ""
+Stack:
+1. context canceled
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/order/api/order_info/v1.(*orderInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/order/api/order_info/v1/order_info_grpc.pb.go:41
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order.(*ControllerV1).OrderInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order/order_v1_order_info_create.go:36
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:07:08.550 {4e80263da2fcb018af279d5967b99ee3} user-service 200 "POST http 127.0.0.1:8199 /frontend/order HTTP/1.1" 1997911.040, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 1, "", ""
+Stack:
+1. context canceled
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/order/api/order_info/v1.(*orderInfoClient).Create
+        /home/lxh/shop-goframe-micro-service-refacotor/app/order/api/order_info/v1/order_info_grpc.pb.go:41
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order.(*ControllerV1).OrderInfoCreate
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order/order_v1_order_info_create.go:36
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:07:35.653 {e6a7b803a9fcb018b1279d59e0226112} user-service 200 "GET http 127.0.0.1:8199 /frontend/order?page=1&size&number&user_id&pay_type&status&consignee_phone&price_gte&price_lte&seconds=&seconds=&seconds=&seconds=&nanos=&nanos=&nanos=&nanos= HTTP/1.1" 308.286, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:31005: connect: connection refused"
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/order/api/order_info/v1.(*orderInfoClient).GetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/order/api/order_info/v1/order_info_grpc.pb.go:59
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order.(*ControllerV1).OrderInfoGetList
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order/order_v1_order_info_get_list.go:23
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:07:54.786 {d7701d78adfcb018b2279d5993890e8e} user-service 200 "GET http 127.0.0.1:8199 /frontend/order/24 HTTP/1.1" 151.418, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:08:03.862 {00ee1495affcb018b3279d5975de5e6f} user-service 200 "GET http 127.0.0.1:8199 /frontend/order/24 HTTP/1.1" 541.168, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:31005: connect: connection refused"
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/order/api/order_info/v1.(*orderInfoClient).GetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/order/api/order_info/v1/order_info_grpc.pb.go:50
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order.(*ControllerV1).OrderInfoGetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order/order_v1_order_info_get_detail.go:18
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:10:12.142 {9e603473cdfcb018b4279d59b99f86fb} user-service 200 "GET http 127.0.0.1:8199 /frontend/order/count HTTP/1.1" 204.709, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:10:24.888 {c98ddd6ad0fcb018b5279d59deac6ffa} user-service 200 "GET http 127.0.0.1:8199 /frontend/order/count HTTP/1.1" 397.385, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 14, "", ""
+Stack:
+1. last connection error: connection error: desc = "transport: Error while dialing: dial tcp 127.0.0.1:31005: connect: connection refused"
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/order/api/order_info/v1.(*orderInfoClient).GetCount
+        /home/lxh/shop-goframe-micro-service-refacotor/app/order/api/order_info/v1/order_info_grpc.pb.go:68
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order.(*ControllerV1).OrderInfoGetCount
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order/order_v1_order_info_get_count.go:16
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:20:24.144 {bf8955f15bfdb0189fbaa070b66aaf61} user-service 200 "GET http 127.0.0.1:8199 /frontend/refund?page=1&size HTTP/1.1" 321.912, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:20:45.416 {ab1c44e560fdb018a1baa070b417a039} user-service 200 "GET http 127.0.0.1:8199 /frontend/refund/detail/24 HTTP/1.1" 242.419, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 61, "Not Authorized", ""
+Stack:
+1. 未提供Token
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:19
+   2).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
+2026-05-19 22:20:53.606 {695cf4cc62fdb018a2baa070418b1fa1} user-service 200 "GET http 127.0.0.1:8199 /frontend/refund/detail/24 HTTP/1.1" 7781.499, 127.0.0.1, "", "Apifox/1.0.0 (https://apifox.com)", 65, "", ""
+Stack:
+1. 退款记录不存在
+   1).  shop-goframe-micro-service-refacotor/utility/middleware.GrpcClientTimeout
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:33
+   2).  shop-goframe-micro-service-refacotor/app/order/api/refund_info/v1.(*refundInfoClient).GetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/order/api/refund_info/v1/refund_info_grpc.pb.go:47
+   3).  shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order.(*ControllerV1).RefundInfoGetDetail
+        /home/lxh/shop-goframe-micro-service-refacotor/app/gateway-h5/internal/controller/order/order_v1_refund_info_get_detail.go:15
+   4).  shop-goframe-micro-service-refacotor/utility/middleware.JWTAuth
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/jwt.go:36
+   5).  shop-goframe-micro-service-refacotor/utility/middleware.MiddlewareCORS
+        /home/lxh/shop-goframe-micro-service-refacotor/utility/middleware/middleware.go:23
+
